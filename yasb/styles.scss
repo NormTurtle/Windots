@@ -1,0 +1,144 @@
+/** Yet Another Status Bar - styles.scss **/
+
+/** Theme: https://www.nordtheme.com/ **/
+$bar-text-color: #cad3f5;
+$bar-background-color: #282b35;
+$bar-error-text-color: 	#ed8796;
+$bar-widget-text-color-dark: #cbd2ec;
+$bar-widget-background-color: #1f1b30;
+$bar-widget-background-color-alt: #313249;
+$bar-widget-background-color-alt2: #24263b;
+$bar-widget-hl-1: #313249;
+// :root {
+//   // https://github.com/hivivo/ngx-json-viewer#theming
+//   --ngx-json-key: #5E81AC;
+//   --ngx-json-string: #8FBCBB;
+// }
+
+// In order override default styles, you must follow the same level of specificity defined in default.scss
+// https://github.com/denBot/yasb/tree/tauri-port/src/default.scss
+body {
+  .bar {
+    background: $bar-background-color;
+    color: $bar-text-color;
+
+    // You can calculate inner bar widths and heights
+    height: calc(100vh - 12px);
+    width: calc(100vw - 12px);
+    margin: 6px;
+    border-radius: 5px;
+
+    .widgets-container {
+
+      .widget {
+        font-family: 'Delugia', Courier, monospace;
+
+        &.error {
+          background: $bar-error-text-color;
+          color: $bar-text-color;
+        }
+      }
+    }
+  }
+}
+
+// Styles not defined in default.scss do not need to match the same level of specificity.
+.widgets-container {
+  .bar-left {
+    margin-left: 3px;
+  }
+  .bar-right {
+    margin-right: 3px;
+  }
+}
+
+// Shared class names can also be styled  e.g. '.widget' targets all widgets:
+.widget {
+  display: flex;
+  padding: 3px 7px;
+  border-radius: 5px;
+  background-color: $bar-widget-background-color;
+
+  i {
+    // Add left/right padding to widget icons
+    padding: 0 5px;
+
+    &.matIcon {
+      font-size: 16px;
+    }
+  }
+}
+
+// You can style widgets based on their ID (widget type)
+#ActiveWindowWidget {
+  background-color: $bar-widget-background-color-alt;
+}
+
+#DateTimeWidget {
+  background-color: transparent;
+}
+
+// Or via a user defined class name
+.bold-right-widget {
+  background: $bar-widget-background-color-alt2;
+  color: $bar-widget-text-color-dark;
+  font-weight: bold;
+}
+
+// .json-viewer-popup {
+//   background-color: $bar-background-color;
+
+//   .ngx-json-viewer {
+//     overflow-y: auto;
+//     background-color: #1b1f27;
+//     border: 1px solid #000;
+//     border-radius: 5px;
+//   }
+// }
+
+.calendar-popup {
+  background: $bar-background-color;
+  border: 1px solid #000;
+
+  * {
+      color: $bar-text-color;
+  }
+
+  .mat-calendar-arrow {
+      fill: $bar-text-color;
+  }
+
+  .mat-calendar-body-selected {
+      color: $bar-widget-background-color-alt2;
+  }
+
+  .mat-calendar-table-header th {
+    font-weight: normal;
+  }
+ 
+  .mat-calendar-body-selected {
+    background-color: $bar-widget-background-color-alt2;
+  }
+
+  .mat-calendar-body-today {
+    background-color: $bar-widget-hl-1;
+    color: $bar-widget-text-color-dark;
+  }
+
+  .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover > 
+  .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+    background-color: $bar-widget-hl-1;
+    color: $bar-widget-text-color-dark;
+    opacity: 0.75;
+  }
+
+  .cdk-program-focused .mat-calendar-body-active > 
+  .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+    color: $bar-widget-hl-1;
+
+    &:hover {
+      color: $bar-widget-text-color-dark;
+    }
+  }
+}
+

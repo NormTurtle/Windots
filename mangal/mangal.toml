@@ -1,0 +1,70 @@
+[anilist]
+code = ''
+enable = false
+id = ''
+link_on_manga_select = true
+secret = ''
+
+[downloader]
+async = true
+chapter_name_template = '[{padded-index}] {chapter}'
+create_manga_dir = true
+create_volume_dir = true
+default_source = ''
+download_cover = true
+path = 'C:\Users\O_0\.cache\mangal'
+stop_on_error = false
+
+[formats]
+skip_unsupported_images = true
+use = 'cbz'
+
+[gen]
+author = ''
+
+[history]
+save_on_download = false
+save_on_read = true
+
+[icons]
+variant = 'kaomoji'
+
+[installer]
+branch = 'main'
+repo = 'mangal-scrapers'
+user = 'metafates'
+
+[logs]
+json = false
+level = 'info'
+write = false
+
+[mangadex]
+language = 'en'
+nsfw = true
+show_unavailable_chapters = false
+
+[metadata]
+comic_info_xml = true
+fetch_anilist = true
+series_json = true
+
+[mini]
+search_limit = 20
+
+[reader]
+browser = ''
+cbz = 'mangareader'
+folder = ''
+pdf = ''
+plain = 'mangareader'
+read_in_browser = false
+zip = 'mangareader'
+
+[tui]
+item_spacing = 1
+read_on_enter = false
+reverse_chapters = false
+search_prompt = '-> '
+show_downloaded_path = true
+show_urls = true

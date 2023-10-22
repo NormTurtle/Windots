@@ -1,0 +1,28 @@
+sw_volume: 100
+audio_device_state:1:Headphones
+state: stop
+current: 4
+random: 0
+repeat: 0
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+0:c/SAVAGE MODE II/01.Intro,21 Savage.mp3
+1:c/SAVAGE MODE II/02.Runnin,21 Savage.mp3
+2:c/SAVAGE MODE II/03.Glock In My Lap,21 Savage.mp3
+3:c/SAVAGE MODE II/04.Mr. Right Now (feat. Drake),21 Savage.mp3
+4:c/SAVAGE MODE II/05.Rich Nigga Shit (feat. Young Thug),21 Savage.mp3
+5:c/SAVAGE MODE II/06.Slidin,21 Savage.mp3
+6:c/SAVAGE MODE II/07.Many Men,21 Savage.mp3
+7:c/SAVAGE MODE II/08.Snitches & Rats (Interlude),21 Savage.mp3
+8:c/SAVAGE MODE II/09.Snitches & Rats (feat. Young Nudy),21 Savage.mp3
+9:c/SAVAGE MODE II/10.My Dawg,21 Savage.mp3
+10:c/SAVAGE MODE II/11.Steppin On Niggas,21 Savage.mp3
+11:c/SAVAGE MODE II/12.Brand New Draco,21 Savage.mp3
+12:c/SAVAGE MODE II/13.No Opp Left Behind,21 Savage.mp3
+13:c/SAVAGE MODE II/14.RIP Luv,21 Savage.mp3
+14:c/SAVAGE MODE II/15.Said N Done,21 Savage.mp3
+playlist_end

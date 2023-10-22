@@ -1,0 +1,9 @@
+--icons
+--color force
+--human
+--hidden
+--level 2
+--dir-order first
+--layout inverted
+--truncate
+# Truncate output to fit terminal emulator window

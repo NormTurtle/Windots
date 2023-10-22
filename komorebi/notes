@@ -1,0 +1,72 @@
+use 
+komorebic resize-delta
+Set the resize delta (used by resize-edge and resize-axis)
+
+Usage: komorebic.exe resize-delta <PIXELS>
+
+Arguments:
+  <PIXELS>  The delta of pixels by which to increase or decrease window dimensions
+            when resizing
+
+Options:
+  -h, --help  Print help
+
+
+
+
+Set the invisible border dimensions around each window
+
+Usage: komorebic.exe invisible-borders <LEFT> <TOP> <RIGHT> <BOTTOM>
+
+Arguments:
+  <LEFT>    Size of the left invisible border
+  <TOP>     Size of the top invisible border (usually 0)
+  <RIGHT>   Size of the right invisible border (usually left * 2)
+  <BOTTOM>  Size of the bottom invisible border (usually the same as left)
+
+Options:
+  -h, --help  Print help
+
+:( komorebic monitor-work-area-offset
+Set offsets for a monitor to exclude parts of the work area from tiling
+
+Usage: komorebic.exe monitor-work-area-offset <MONITOR> <LEFT> <TOP> <RIGHT> <BOTTOM>
+
+Arguments:
+  <MONITOR>  Monitor index (zero-indexed)
+  <LEFT>     Size of the left work area offset (set right to left * 2 to maintain
+             right padding)
+  <TOP>      Size of the top work area offset (set bottom to the same value to
+             maintain bottom padding)
+  <RIGHT>    Size of the right work area offset
+  <BOTTOM>   Size of the bottom work area offset
+
+Options:
+  -h, --help  Print help
+
+:) komorebic adjust-container-padding
+Adjust container padding on the focused workspace
+
+Usage: komorebic.exe adjust-container-padding <SIZING> <ADJUSTMENT>
+
+Arguments:
+  <SIZING>      [possible values: increase, decrease]
+  <ADJUSTMENT>  Pixels to adjust by as an integer
+
+Options:
+  -h, --help  Print help
+
+
+:( komorebic flip-layout
+Flip the layout on the focused workspace (BSP only)
+
+Usage: komorebic.exe flip-layout <AXIS>
+
+Arguments:
+  <AXIS>  [possible values: horizontal, vertical, horizontal-and-vertical]
+
+Options:
+  -h, --help  Print help
+
+
+

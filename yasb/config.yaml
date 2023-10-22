@@ -1,0 +1,126 @@
+bars:
+  yasb_bar:                   # Required, label MUST be in snake_case or ClassCase e.g. "foo_bar" or "FooBar"
+    thickness: 28             # Optional, default: 64, the width (or height) of the bar in pixels
+    edge: "top"               # Optional, default: top, options: top|left|bottom|right
+    screens: []               # Optional, default: [] (all screens), takes: list of screen names to show bar on
+    win_app_bar: true         # Optional, default: false, registers bar as a Windows Application Desktop Toolbar (e.g. a custom taskbar)
+    always_on_top: true       # Optional, default: false, ensures bar is always at TOPMOST window level.
+    blur_effect: mica         # Optional, default: None, options: blur|acrylic|mica. Mica works on Windows 11 only. Acrylic may have poor performance.
+    transparency: true        # Optional, default: true, enables fully transparent windows. Disable to see a white fallback window background.
+    widgets:                  # Provide a list of widgets for left, middle and right bar columns
+      left: [ komorebi_workspaces, active_window ]
+      middle: [ clock_widget,
+         hostname_widget,
+       ]
+      right: [
+        cpu_usage_widget,
+        mem_usage_widget,
+         custom_weather_widget,
+        # custom_ipinfo_widget,
+         # net_usage_widget, #  do not work
+         uptime_widget,
+       ]
+
+widgets:
+  # Formattable labels have access to several utility functions.
+  # See: src/utils/format.ts for a list of available utility functions.
+
+  clock_widget:
+    kind: DateTimeWidget
+    formats: ['mediumTime', 'mediumDate']
+    timezones: ['GMT', 'EST']
+    calendar:
+      locale: "In"
+      width: 250
+      height: 300
+    callbacks:
+      on_left: "calendar"
+      on_right: "next_timezone"
+  
+  komorebi_workspaces:
+    kind: KomorebiWorkspaceWidget
+    label: "${workspace.name ?? workspace.index + 1}"
+    label_tooltip: "${JSON.stringify(workspace, null, 2)}"
+    label_offline: "Komorebi Offline"
+    hide_empty: true
+    cycle_on_scroll: true
+  
+  uptime_widget:
+    kind: SysInfoWidget
+    # For humianizer formatting: https://github.com/EvanHahn/HumanizeDuration.js
+    label: "${matIcon('restore')} ${humanize(sys_info.sys.uptime * 1000, { round: true, units: ['h', 'm'] })}" 
+    label_alt: "${matIcon('restore')} ${new Date(sys_info.sys.boot_time * 1000).toLocaleString()}"
+    interval: 500
+    callbacks:
+      on_left: "toggle_label"
+  
+  hostname_widget:
+    kind: SysInfoWidget
+    label: "${sys_info.sys.host}"
+  
+  cpu_usage_widget:
+    kind: SysInfoWidget
+    label: "${matIcon('bar_chart')} ${percent(sys_info.sys.cpu_info.cpu_usage, 100)}"
+    interval: 500
+    json_viewer:
+      expanded: true
+      max_depth: 1
+      from_child: "sys_info.cpu"
+    callbacks:
+      on_left: "json_viewer"
+      on_right: "toggle_label"
+
+  mem_usage_widget:
+    kind: SysInfoWidget
+    label: "${matIcon('storage')} ${percent(sys_info.mem.mem_used, sys_info.mem.mem_total)}"
+    interval: 1000
+
+  net_usage_widget:
+    kind: SysInfoWidget
+    label: "${matIcon('download')} ${pBytes(sys_info.networks['Wi-Fi'].received)}/s"
+    label_alt: "${matIcon('upload')} ${pBytes(sys_info.networks['Wi-Fi'].transmitted)}/s"
+    interval: 500
+    callbacks:
+      on_left: "toggle_label"
+  
+  active_window:
+    kind: ActiveWindowWidget
+    label: "${matIcon('grain')} ${win.title}"
+    label_alt: "class=${win.wm_class} exe=${win.exe_name}"
+    label_max_len: 64
+    is_monitor_exclusive: true
+    json_viewer:
+      width: 800
+      height: 300
+      expanded: false
+    callbacks:
+      on_left: "json_viewer"
+      on_right: { exec: { cmd: "cmd.exe", args: ["/c", "start", "https://google.com/?q=${win.exe_name}"] } }
+
+  custom_weather_widget:
+    kind: CustomWidget
+    label: "${matIcon('thermostat')} ${res.current_weather.temperature}°c"
+    label_alt: "${matIcon('air')} ${res.current_weather.windspeed}"
+    command:
+      cmd: "curl.exe"
+      # See https://open-meteo.com/en/docs
+      args: ["https://api.open-meteo.com/v1/forecast?current_weather=true&temperature_unit=celsius&latitude=55.87&longitude=-4.26"]
+      # Poll every 30 minutes
+      interval: 1800000
+    callbacks:
+      on_left: "toggle_label"
+      on_right: "json_viewer"
+
+  custom_ipinfo_widget:
+    kind: CustomWidget
+    class: "ip_info"
+    label: "${matIcon('location_on')} ${res.city}, ${res.country}"
+    label_alt: "${matIcon('public')} ${res.ip}"
+    command:
+      cmd: "curl.exe"
+      args: ["https://ipinfo.io"]
+      # Poll every 10 minutes
+      interval: 600000
+    callbacks:
+      on_left: { exec: { cmd: "cmd.exe", args: ["/c", "start", "https://ipinfo.io/${res.ip}"] } }
+      on_hover: "toggle_label"

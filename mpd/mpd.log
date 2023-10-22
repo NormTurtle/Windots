@@ -1,0 +1,480 @@
+Jul 01 02:39 : config: inotify: auto_update was disabled. enable during compilation phase
+Jul 01 02:39 : config: option 'encoder' on line 140 was not recognized
+Jul 01 02:39 : config: option 'port' on line 141 was not recognized
+Jul 01 02:39 : config: option 'bind_to_address' on line 142 was not recognized
+Jul 01 02:39 : config: option 'bitrate' on line 144 was not recognized
+Jul 01 02:40 : exception: Stored playlists are disabled
+Jul 01 02:41 : player: played "9090/Metro Boomin/HEROES & VILLAINS (Heroes Version)/09 - Metro Boomin - I Can't Save You (Interlude) [with Future & feat. Don Toliver].ogg"
+Jul 06 01:16 : config: inotify: auto_update was disabled. enable during compilation phase
+Jul 06 01:16 : config: option 'encoder' on line 140 was not recognized
+Jul 06 01:16 : config: option 'port' on line 141 was not recognized
+Jul 06 01:16 : config: option 'bind_to_address' on line 142 was not recognized
+Jul 06 01:16 : config: option 'bitrate' on line 144 was not recognized
+Jul 06 01:17 : exception: Stored playlists are disabled
+Jul 06 01:17 : exception: Stored playlists are disabled
+Jul 06 01:17 : player: played "9090/Metro Boomin/HEROES & VILLAINS (Heroes Version)/09 - Metro Boomin - I Can't Save You (Interlude) [with Future & feat. Don Toliver].ogg"
+Jul 06 01:19 : exception: Stored playlists are disabled
+Jul 06 01:19 : exception: Stored playlists are disabled
+Jul 06 01:20 : exception: Stored playlists are disabled
+Jul 06 01:20 : exception: Stored playlists are disabled
+Jul 06 01:20 : player: played "9090/The weeknd/The Weeknd, Future - Double Fantasy/02. The Weeknd - Double Fantasy (Radio Edit) (Explicit).flac"
+Jul 06 01:22 : player: played ".Music/Danny Knutelsky/I Want It All/01 - Danny Knutelsky - Kids.ogg"
+Jul 06 01:26 : player: played ".Music/Danny Knutelsky/I Want It All/02 - Danny Knutelsky - Magic.ogg"
+Aug 25 00:57 : config: inotify: auto_update was disabled. enable during compilation phase
+Aug 25 00:57 : config: option 'encoder' on line 140 was not recognized
+Aug 25 00:57 : config: option 'port' on line 141 was not recognized
+Aug 25 00:57 : config: option 'bind_to_address' on line 142 was not recognized
+Aug 25 00:57 : config: option 'bitrate' on line 144 was not recognized
+Aug 25 00:58 : player: played ".Music/Danny Knutelsky/I Want It All/04 - Danny Knutelsky - Dream State.ogg"
+Aug 25 00:58 : exception: Stored playlists are disabled
+Aug 25 00:58 : ffmpeg/mp3: Estimating duration from bitrate, this may be inaccurate
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added 9090/1998 - Cozy/1. Ice Manicure.mp3
+Aug 25 00:58 : ffmpeg/mp3: Estimating duration from bitrate, this may be inaccurate
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added 9090/1998 - Cozy/10. Stand in the Light (’９８　ＲＥＭＩＸ).mp3
+Aug 25 00:58 : ffmpeg/mp3: Estimating duration from bitrate, this may be inaccurate
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added 9090/1998 - Cozy/11. Salesman Lonliness.mp3
+Aug 25 00:58 : ffmpeg/mp3: Estimating duration from bitrate, this may be inaccurate
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added 9090/1998 - Cozy/13. Dreaming Girl (’９８　ＲＥＭＩＸ).mp3
+Aug 25 00:58 : ffmpeg/mp3: Estimating duration from bitrate, this may be inaccurate
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added 9090/1998 - Cozy/14. Someday on a Sunny Day (ＡＬＢＵＭ　ＲＥＭＩＸ).mp3
+Aug 25 00:58 : ffmpeg/mp3: Estimating duration from bitrate, this may be inaccurate
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added 9090/1998 - Cozy/15. Magic Touch (’９８ヴァージョン).mp3
+Aug 25 00:58 : ffmpeg/mp3: Estimating duration from bitrate, this may be inaccurate
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added 9090/1998 - Cozy/3. Fragile.mp3
+Aug 25 00:58 : ffmpeg/mp3: Estimating duration from bitrate, this may be inaccurate
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added 9090/1998 - Cozy/4. Donut Song.mp3
+Aug 25 00:58 : ffmpeg/mp3: Estimating duration from bitrate, this may be inaccurate
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added 9090/1998 - Cozy/5. Moonlight.mp3
+Aug 25 00:58 : ffmpeg/mp3: Estimating duration from bitrate, this may be inaccurate
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added 9090/1998 - Cozy/6. Ultramarine Flame.mp3
+Aug 25 00:58 : ffmpeg/mp3: Estimating duration from bitrate, this may be inaccurate
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added 9090/1998 - Cozy/7. Boomerang Baby.mp3
+Aug 25 00:58 : ffmpeg/mp3: Estimating duration from bitrate, this may be inaccurate
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added 9090/1998 - Cozy/8. ＣＯＬＬＡＧＥ.mp3
+Aug 25 00:58 : ffmpeg/mp3: Estimating duration from bitrate, this may be inaccurate
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added 9090/1998 - Cozy/9. Ｌａｉ－Ｌａ.mp3
+Aug 25 00:58 : exception: Failed to access C:/Users/O_0/Music/9090/Metro Boomin/METRO BOOMIN PRESENTS SPIDER-MAN_ ACROSS THE SPIDER-VERSE (SOUNDTRACK FROM AND INSPIRED BY THE MOTION PICTURE _ DELUXE EDITION)/01 - Metro Boomin - Annihilate (Spider-Man_ Across the Spider-Verse) (Metro Boomin & Swae Lee, Lil Wayne, Offset).lrc: The system cannot find the path specified.
+: The system cannot find the path specified
+Aug 25 00:58 : exception: Failed to access C:/Users/O_0/Music/9090/Metro Boomin/METRO BOOMIN PRESENTS SPIDER-MAN_ ACROSS THE SPIDER-VERSE (SOUNDTRACK FROM AND INSPIRED BY THE MOTION PICTURE _ DELUXE EDITION)/01 - Metro Boomin - Annihilate (Spider-Man_ Across the Spider-Verse) (Metro Boomin & Swae Lee, Lil Wayne, Offset).ogg: The system cannot find the path specified.
+: The system cannot find the path specified
+Aug 25 00:58 : exception: Failed to access C:/Users/O_0/Music/9090/Metro Boomin/METRO BOOMIN PRESENTS SPIDER-MAN_ ACROSS THE SPIDER-VERSE (SOUNDTRACK FROM AND INSPIRED BY THE MOTION PICTURE _ DELUXE EDITION)/03 - Metro Boomin - All The Way Live (Spider-Man_ Across the Spider-Verse) (Metro Boomin & Future, Lil Uzi Vert).lrc: The system cannot find the path specified.
+: The system cannot find the path specified
+Aug 25 00:58 : exception: Failed to access C:/Users/O_0/Music/9090/Metro Boomin/METRO BOOMIN PRESENTS SPIDER-MAN_ ACROSS THE SPIDER-VERSE (SOUNDTRACK FROM AND INSPIRED BY THE MOTION PICTURE _ DELUXE EDITION)/03 - Metro Boomin - All The Way Live (Spider-Man_ Across the Spider-Verse) (Metro Boomin & Future, Lil Uzi Vert).ogg: The system cannot find the path specified.
+: The system cannot find the path specified
+Aug 25 00:58 : exception: Failed to access C:/Users/O_0/Music/9090/Metro Boomin/METRO BOOMIN PRESENTS SPIDER-MAN_ ACROSS THE SPIDER-VERSE (SOUNDTRACK FROM AND INSPIRED BY THE MOTION PICTURE _ DELUXE EDITION)/06 - Metro Boomin - Calling (Spider-Man_ Across the Spider-Verse) (Metro Boomin & Swae Lee, NAV, feat. A Boogie Wit da Hoodie).lrc: The system cannot find the path specified.
+: The system cannot find the path specified
+Aug 25 00:58 : exception: Failed to access C:/Users/O_0/Music/9090/Metro Boomin/METRO BOOMIN PRESENTS SPIDER-MAN_ ACROSS THE SPIDER-VERSE (SOUNDTRACK FROM AND INSPIRED BY THE MOTION PICTURE _ DELUXE EDITION)/06 - Metro Boomin - Calling (Spider-Man_ Across the Spider-Verse) (Metro Boomin & Swae Lee, NAV, feat. A Boogie Wit da Hoodie).ogg: The system cannot find the path specified.
+: The system cannot find the path specified
+Aug 25 00:58 : exception: Failed to access C:/Users/O_0/Music/9090/Metro Boomin/METRO BOOMIN PRESENTS SPIDER-MAN_ ACROSS THE SPIDER-VERSE (SOUNDTRACK FROM AND INSPIRED BY THE MOTION PICTURE _ DELUXE EDITION)/08 - Metro Boomin - Link Up (Metro Boomin & Don Toliver, Wizkid feat. BEAM & Toian) - Spider-Verse Remix (Spider-Man_ Across the Spider-Verse ).lrc: The system cannot find the path specified.
+: The system cannot find the path specified
+Aug 25 00:58 : exception: Failed to access C:/Users/O_0/Music/9090/Metro Boomin/METRO BOOMIN PRESENTS SPIDER-MAN_ ACROSS THE SPIDER-VERSE (SOUNDTRACK FROM AND INSPIRED BY THE MOTION PICTURE _ DELUXE EDITION)/08 - Metro Boomin - Link Up (Metro Boomin & Don Toliver, Wizkid feat. BEAM & Toian) - Spider-Verse Remix (Spider-Man_ Across the Spider-Verse ).ogg: The system cannot find the path specified.
+: The system cannot find the path specified
+Aug 25 00:58 : exception: Failed to access C:/Users/O_0/Music/9090/Metro Boomin/METRO BOOMIN PRESENTS SPIDER-MAN_ ACROSS THE SPIDER-VERSE (SOUNDTRACK FROM AND INSPIRED BY THE MOTION PICTURE _ DELUXE EDITION)/09 - Metro Boomin - Self Love (Spider-Man_ Across the Spider-Verse) (Metro Boomin & Coi Leray).lrc: The system cannot find the path specified.
+: The system cannot find the path specified
+Aug 25 00:58 : exception: Failed to access C:/Users/O_0/Music/9090/Metro Boomin/METRO BOOMIN PRESENTS SPIDER-MAN_ ACROSS THE SPIDER-VERSE (SOUNDTRACK FROM AND INSPIRED BY THE MOTION PICTURE _ DELUXE EDITION)/09 - Metro Boomin - Self Love (Spider-Man_ Across the Spider-Verse) (Metro Boomin & Coi Leray).ogg: The system cannot find the path specified.
+: The system cannot find the path specified
+Aug 25 00:58 : exception: Failed to access C:/Users/O_0/Music/9090/Metro Boomin/METRO BOOMIN PRESENTS SPIDER-MAN_ ACROSS THE SPIDER-VERSE (SOUNDTRACK FROM AND INSPIRED BY THE MOTION PICTURE _ DELUXE EDITION)/11 - Metro Boomin - Nonviolent Communication (Metro Boomin & James Blake, A$AP Rocky, 21 Savage).lrc: The system cannot find the path specified.
+: The system cannot find the path specified
+Aug 25 00:58 : exception: Failed to access C:/Users/O_0/Music/9090/Metro Boomin/METRO BOOMIN PRESENTS SPIDER-MAN_ ACROSS THE SPIDER-VERSE (SOUNDTRACK FROM AND INSPIRED BY THE MOTION PICTURE _ DELUXE EDITION)/11 - Metro Boomin - Nonviolent Communication (Metro Boomin & James Blake, A$AP Rocky, 21 Savage).ogg: The system cannot find the path specified.
+: The system cannot find the path specified
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST (2021) [FLAC] [24B-44.1kHz]/01. Tyler, The Creator - SIR BAUDELAIRE (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST (2021) [FLAC] [24B-44.1kHz]/02. Tyler, The Creator - CORSO (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST (2021) [FLAC] [24B-44.1kHz]/03. Tyler, The Creator - LEMONHEAD (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST (2021) [FLAC] [24B-44.1kHz]/04. Tyler, The Creator - WUSYANAME (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST (2021) [FLAC] [24B-44.1kHz]/05. Tyler, The Creator - LUMBERJACK (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST (2021) [FLAC] [24B-44.1kHz]/06. Tyler, The Creator - HOT WIND BLOWS (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST (2021) [FLAC] [24B-44.1kHz]/07. Tyler, The Creator - MASSA (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST (2021) [FLAC] [24B-44.1kHz]/08. Tyler, The Creator - RUNITUP (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST (2021) [FLAC] [24B-44.1kHz]/09. Tyler, The Creator - MANIFESTO (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST (2021) [FLAC] [24B-44.1kHz]/10. Tyler, The Creator - SWEET  I THOUGHT YOU WANTED TO DANCE (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST (2021) [FLAC] [24B-44.1kHz]/11. Tyler, The Creator - MOMMA TALK (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST (2021) [FLAC] [24B-44.1kHz]/12. Tyler, The Creator - RISE! (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST (2021) [FLAC] [24B-44.1kHz]/13. Tyler, The Creator - BLESSED (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST (2021) [FLAC] [24B-44.1kHz]/14. Tyler, The Creator - JUGGERNAUT (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST (2021) [FLAC] [24B-44.1kHz]/15. Tyler, The Creator - WILSHIRE (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST (2021) [FLAC] [24B-44.1kHz]/16. Tyler, The Creator - SAFARI (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST The Estate Sale (2023) [FLAC] [16B-44.1kHz]/01. Tyler, The Creator - SIR BAUDELAIRE (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST The Estate Sale (2023) [FLAC] [16B-44.1kHz]/02. Tyler, The Creator - CORSO (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST The Estate Sale (2023) [FLAC] [16B-44.1kHz]/03. Tyler, The Creator - LEMONHEAD (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST The Estate Sale (2023) [FLAC] [16B-44.1kHz]/04. Tyler, The Creator - WUSYANAME (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST The Estate Sale (2023) [FLAC] [16B-44.1kHz]/05. Tyler, The Creator - LUMBERJACK (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST The Estate Sale (2023) [FLAC] [16B-44.1kHz]/06. Tyler, The Creator - HOT WIND BLOWS (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST The Estate Sale (2023) [FLAC] [16B-44.1kHz]/07. Tyler, The Creator - MASSA (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST The Estate Sale (2023) [FLAC] [16B-44.1kHz]/08. Tyler, The Creator - RUNITUP (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST The Estate Sale (2023) [FLAC] [16B-44.1kHz]/09. Tyler, The Creator - MANIFESTO (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST The Estate Sale (2023) [FLAC] [16B-44.1kHz]/10. Tyler, The Creator - SWEET  I THOUGHT YOU WANTED TO DANCE (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST The Estate Sale (2023) [FLAC] [16B-44.1kHz]/11. Tyler, The Creator - MOMMA TALK (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST The Estate Sale (2023) [FLAC] [16B-44.1kHz]/12. Tyler, The Creator - RISE! (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST The Estate Sale (2023) [FLAC] [16B-44.1kHz]/13. Tyler, The Creator - BLESSED (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST The Estate Sale (2023) [FLAC] [16B-44.1kHz]/14. Tyler, The Creator - JUGGERNAUT (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST The Estate Sale (2023) [FLAC] [16B-44.1kHz]/15. Tyler, The Creator - WILSHIRE (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST The Estate Sale (2023) [FLAC] [16B-44.1kHz]/16. Tyler, The Creator - SAFARI (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST The Estate Sale (2023) [FLAC] [16B-44.1kHz]/17. Tyler, The Creator - EVERYTHING MUST GO (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST The Estate Sale (2023) [FLAC] [16B-44.1kHz]/18. Tyler, The Creator - STUNTMAN (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST The Estate Sale (2023) [FLAC] [16B-44.1kHz]/19. Tyler, The Creator - WHAT A DAY (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST The Estate Sale (2023) [FLAC] [16B-44.1kHz]/20. Tyler, The Creator - WHARF TALK (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST The Estate Sale (2023) [FLAC] [16B-44.1kHz]/21. Tyler, The Creator - DOGTOOTH (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST The Estate Sale (2023) [FLAC] [16B-44.1kHz]/22. Tyler, The Creator - HEAVEN TO ME (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST The Estate Sale (2023) [FLAC] [16B-44.1kHz]/23. Tyler, The Creator - BOYFRIEND, GIRLFRIEND (2020 Demo) (Explicit).flac
+Aug 25 00:58 : update: added 9090/tyler/Tyler, The Creator - CALL ME IF YOU GET LOST The Estate Sale (2023) [FLAC] [16B-44.1kHz]/24. Tyler, The Creator - SORRY NOT SORRY (Explicit).flac
+Aug 25 00:58 : update: updating beat or music/Velocity Edit Ringtone Song   One Dance Ringtone   Slowed Version.ogg
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Alone At Prom/02.Pink Dolphin Sunset (feat. Tee),Tory Lanez.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Alone At Prom/03.Midnight's Interlude,Tory Lanez.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Alone At Prom/04.The Color Violet,Tory Lanez.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Alone At Prom/05.Lavender Sunflower,Tory Lanez.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Alone At Prom/06.Ballad of a Badman,Tory Lanez.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Alone At Prom/07.Lady Of Namek,Tory Lanez.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Alone At Prom/08.Pluto’s Last Comet,Tory Lanez.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Alone At Prom/09.‘87 Stingray,Tory Lanez.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Alone At Prom/10.Hurt From Mercury,Tory Lanez.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Alone At Prom/11.Last Kiss Of Nebulon,Tory Lanez.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/CALL ME IF YOU GET LOST/01.SIR BAUDELAIRE (feat. DJ Drama),Tyler, The Creator.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/CALL ME IF YOU GET LOST/02.CORSO,Tyler, The Creator.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/CALL ME IF YOU GET LOST/03.LEMONHEAD (feat. 42 Dugg),Tyler, The Creator.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/CALL ME IF YOU GET LOST/04.WUSYANAME (feat. Youngboy Never Broke Again & Ty Dolla $ign),Tyler, The Creator.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/CALL ME IF YOU GET LOST/05.LUMBERJACK,Tyler, The Creator.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/CALL ME IF YOU GET LOST/06.HOT WIND BLOWS (feat. Lil Wayne),Tyler, The Creator.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/CALL ME IF YOU GET LOST/07.MASSA,Tyler, The Creator.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/CALL ME IF YOU GET LOST/08.RUNITUP (feat. Teezo Touchdown),Tyler, The Creator.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/CALL ME IF YOU GET LOST/09.MANIFESTO (feat. Domo Genesis),Tyler, The Creator.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/CALL ME IF YOU GET LOST/10.SWEET _ I THOUGHT YOU WANTED TO DANCE (feat. Brent Faiyaz & Fana Hues),Tyler, The Creator.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/CALL ME IF YOU GET LOST/11.MOMMA TALK,Tyler, The Creator.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/CALL ME IF YOU GET LOST/12.RISE! (feat. DAISY WORLD),Tyler, The Creator.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/CALL ME IF YOU GET LOST/13.BLESSED,Tyler, The Creator.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/CALL ME IF YOU GET LOST/14.JUGGERNAUT (feat. Lil Uzi Vert & Pharrell Williams),Tyler, The Creator.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/CALL ME IF YOU GET LOST/15.WILSHIRE,Tyler, The Creator.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/CALL ME IF YOU GET LOST/16.SAFARI,Tyler, The Creator.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/IGOR/01.IGOR'S THEME,Tyler, The Creator.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/IGOR/02.EARFQUAKE,Tyler, The Creator.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/IGOR/03.I THINK,Tyler, The Creator.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/IGOR/04.EXACTLY WHAT YOU RUN FROM YOU END UP CHASING,Tyler, The Creator.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/IGOR/05.RUNNING OUT OF TIME,Tyler, The Creator.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/IGOR/06.NEW MAGIC WAND,Tyler, The Creator.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/IGOR/07.A BOY IS A GUN_,Tyler, The Creator.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/IGOR/08.PUPPET,Tyler, The Creator.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/IGOR/09.WHAT'S GOOD,Tyler, The Creator.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/IGOR/10.GONE, GONE _ THANK YOU,Tyler, The Creator.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/IGOR/11.I DON'T LOVE YOU ANYMORE,Tyler, The Creator.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/IGOR/12.ARE WE STILL FRIENDS_,Tyler, The Creator.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/01.Plastic Love,Mariya Takeuchi.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/02.SHYNESS BOY,Anri.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/03.Mayonaka no Door _ Stay With Me,Miki Matsubara.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/04.Just a Joke,Yurie Kokubu.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/05.テレフォン・ナンバー,Junko Ohashi.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/06.MAYONAKANO JOKE,EMMA HAZY MINAMI.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/07.Remember Summer Days,Anri.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/08.Good Bye Boogie Dance,Anri.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/09.OH NO,OH YES! - 2012 Remaster,Akina Nakamori.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/10.SUMMER BLUE,Bread And Butter.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/11.Last Summer Whisper,Anri.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/12.midnight cruisin',Kingo Hamada.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/13.4_00A.M_,Taeko Onuki.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/14.我がままなハイヒール,Kaoru Akimoto.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/15.雲のゆくえに,Minako Yoshida.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/16.WINDY SUMMER,Anri.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/17.サンセット・ロード,高橋玲子.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/19.River's Island,Kiyotaka Sugiyama.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/20.私達を信じていて,Cindy.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/21.Summer Connection,Taeko Onuki.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/22.DRIVING MY LOVE,Anri.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/23.Tokai,Taeko Onuki.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/24.横顔,Taeko Onuki.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/25.Sweet Love,Junko Ohashi.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/26.Fly By Day,Anri.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/27.MIDNIGHT DRIVER,Minako Yoshida.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/28.街のドルフィン,Kingo Hamada.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/29.I Can Tell,Yung Bae.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/31.First Light - 2018 Remaster,Makoto Matsushita.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/32.Shiawasenomonosashi,Mariya Takeuchi.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/33.Midnight Pretenders,Tomoko Aran.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/34.Simple Love,Junko Ohashi.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/35.ふたりの夏物語 NEVER ENDING SUMMER,S. Kiyotaka & Omega Tribe.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/36.I'm in Love,Tomoko Aran.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/37.夢の続き,Mariya Takeuchi.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/38.黄昏のBAY CITY,Junko Yagami.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/40.Fly-day Chinatown,泰葉.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/41.Romantic Avenue,KWON OHSUNG.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/42.スカイレストラン,Hi-Fi Set.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/Japanese City Pop/43.Loretta,Ginger Root.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/SAVAGE MODE II/01.Intro,21 Savage.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/SAVAGE MODE II/02.Runnin,21 Savage.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/SAVAGE MODE II/03.Glock In My Lap,21 Savage.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/SAVAGE MODE II/04.Mr. Right Now (feat. Drake),21 Savage.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/SAVAGE MODE II/05.Rich Nigga Shit (feat. Young Thug),21 Savage.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/SAVAGE MODE II/06.Slidin,21 Savage.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/SAVAGE MODE II/07.Many Men,21 Savage.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/SAVAGE MODE II/08.Snitches & Rats (Interlude),21 Savage.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/SAVAGE MODE II/09.Snitches & Rats (feat. Young Nudy),21 Savage.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/SAVAGE MODE II/10.My Dawg,21 Savage.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/SAVAGE MODE II/11.Steppin On Niggas,21 Savage.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/SAVAGE MODE II/12.Brand New Draco,21 Savage.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/SAVAGE MODE II/13.No Opp Left Behind,21 Savage.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/SAVAGE MODE II/14.RIP Luv,21 Savage.mp3
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : update: added c/SAVAGE MODE II/15.Said N Done,21 Savage.mp3
+Aug 25 00:58 : update: updating /Ponyo on the Cliff by the Sea (Full Japanese Theme Song).webm
+Aug 25 00:58 : ffmpeg: Unsupported libavcodec SampleFormat value: name   depth (?)
+Aug 25 00:58 : exception: Stored playlists are disabled
+Aug 25 00:58 : exception: Stored playlists are disabled
+Aug 25 00:58 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 00:58 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Aug 25 00:59 : exception: Stored playlists are disabled
+Aug 25 00:59 : exception: Stored playlists are disabled
+Aug 25 00:59 : exception: Stored playlists are disabled
+Aug 25 01:00 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 01:00 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Aug 25 01:00 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 01:00 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Aug 25 01:00 : player: played "c/SAVAGE MODE II/01.Intro,21 Savage.mp3"
+Aug 25 01:00 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 01:00 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Aug 25 01:00 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 01:00 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Aug 25 01:01 : ffmpeg/mp3float: Could not update timestamps for discarded samples.
+Aug 25 01:01 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 01:01 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Aug 25 01:01 : player: played "c/SAVAGE MODE II/01.Intro,21 Savage.mp3"
+Aug 25 01:04 : ffmpeg/mp3float: Could not update timestamps for discarded samples.
+Aug 25 01:04 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 01:04 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Aug 25 01:04 : player: played "c/SAVAGE MODE II/02.Runnin,21 Savage.mp3"
+Aug 25 01:08 : ffmpeg/mp3float: Could not update timestamps for discarded samples.
+Aug 25 01:08 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 01:08 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Aug 25 01:08 : player: played "c/SAVAGE MODE II/03.Glock In My Lap,21 Savage.mp3"
+Aug 25 01:11 : ffmpeg/mp3float: Could not update timestamps for discarded samples.
+Aug 25 01:11 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 01:11 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Aug 25 01:11 : player: played "c/SAVAGE MODE II/04.Mr. Right Now (feat. Drake),21 Savage.mp3"
+Aug 25 01:11 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Aug 25 01:12 : config: inotify: auto_update was disabled. enable during compilation phase
+Aug 25 01:12 : config: option 'encoder' on line 140 was not recognized
+Aug 25 01:12 : config: option 'port' on line 141 was not recognized
+Aug 25 01:12 : config: option 'bind_to_address' on line 142 was not recognized
+Aug 25 01:12 : config: option 'bitrate' on line 144 was not recognized
+Aug 25 01:12 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 01:12 : ffmpeg/mp3: Could not find codec parameters for stream 1 (Video: mjpeg, none): unspecified size
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options
+Aug 25 01:12 : ffmpeg/mp3float: Could not update timestamps for skipped samples.
+Aug 25 01:14 : player: played "c/SAVAGE MODE II/05.Rich Nigga Shit (feat. Young Thug),21 Savage.mp3"
