@@ -11,12 +11,11 @@ M = {
             -- "saadparwaiz1/cmp_luasnip", -- Luasnip source for cmp
             { -- Snippy
                 "dcampos/nvim-snippy",
-                -- keys = {
-                --     { "<Tab>", mode = { "i", "x" } },
-                --     "g<Tab>",
-                -- },
+                keys = {
+                    { "<Tab>", mode = { "i", "x" } },
+                    "g<Tab>",
+                },
                 ft = "snippets",
-                cmd = { "SnippyEdit", "SnippyReload" },
             },
             "dcampos/cmp-snippy",
             "onsails/lspkind.nvim", -- icon on Completion
@@ -28,7 +27,7 @@ M = {
             "hrsh7th/cmp-emoji", -- super use : : emojie in colon
             "hrsh7th/cmp-nvim-lsp", -- cmp form LSP idk?
             -- "lukas-reineke/cmp-rg",     -- Ripgrep
-            { "tzachar/cmp-fuzzy-buffer", dependencies = "tzachar/fuzzy.nvim" },
+            -- { "tzachar/cmp-fuzzy-buffer", dependencies = "tzachar/fuzzy.nvim" },
             -- { "tzachar/cmp-fuzzy-path", dependencies = "tzachar/fuzzy.nvim" }, -- Fuzzy path search
             -- Path
             -- 			-- "FelipeLema/cmp-async-path", -- // paths cmp
@@ -80,6 +79,7 @@ M = {
                         mode = "symbol", -- show only symbol annotations
                         maxwidth = 40, -- prevent the popup from showing more than provided characters
                         ellipsis_char = "...", -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead
+                        symbol_map = { Codeium = "" },
                         --             menu = {
                         --                 nvim_lsp = "[LSP]",
                         --                 -- luasnip = "[LuaSnip]",
@@ -118,14 +118,14 @@ M = {
                     { name = "spell" },
                     { name = "emoji" },
                     { name = "rg" },
-                    { name = "fuzzy_buffer" },
+                    -- { name = "fuzzy_buffer" },
                     -- { name = 'async_path' },
                     -- {  name = "path", },
-                    { name = "fuzzy_path", option = { fd_timeout_msec = 1500 } },
 
                     -- { name = 'digraphs' }, --
                     { name = "neorg" },
                     { name = "calc" },
+                    { name = "codeium" },
                 }),
             })
         end,

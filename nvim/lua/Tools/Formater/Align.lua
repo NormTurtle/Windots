@@ -2,7 +2,6 @@ M = {
 
     {
         "echasnovski/mini.align",
-        versoin = "*",
         keys = "ga",
         opts = true,
         -- config = function()

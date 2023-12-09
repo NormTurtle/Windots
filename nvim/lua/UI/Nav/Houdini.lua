@@ -3,7 +3,8 @@ M = {
 
     {
         "TheBlob42/houdini.nvim",
-        event = { "CmdlineEnter", "InsertEnter" },
+        event = { "InsertEnter" },
+        keys = { ":" },
         opts = {
             mappings = { "jk" },
             timeout = vim.o.timeoutlen,
@@ -25,9 +26,6 @@ M = {
                 ["cv"] = ("<BS>"):rep(100) .. "vi<CR>",
             },
         },
-        -- config = function()
-        --     require('houdini').setup()
-        -- end
     },
 }
 

@@ -1,5 +1,4 @@
 -- 1st line
--- https://github.com/topaxi/gh-actions.nvim
 -- https://github.com/tiagovla/scope.nvim -- session with buffline
 -- https://github.com/folke/persistence.nvim
 --https://github.com/ray-x/web-tools.nvim -- we devlopement , html , javascript , curl
@@ -14,6 +13,9 @@
 -- https://github.com/Dhanus3133/Leetbuddy.nvim -- leetcode in neovim
 -- python
 --https://github.com/GCBallesteros/NotebookNavigator.nvim  -- ipynb
+-- sync file in remote serverj
+--https://github.com/coffebar/transfer.nvim
+--https://github.com/GCBallesteros/machinegun.nvim
 -- Terminal
 --https://github.com/niuiic/remote.nvim   -- edit file from ssh no dependencies
 --https://github.com/mikesmithgh/kitty-scrollback.nvim
@@ -41,24 +43,46 @@ require("lazy").setup({
     --  │ Themes | Colors │
     --  ╰─────────────────╯
     { import = "UI.Colors.Themes" }, -- Rosepine | Aura | oh-lucy | kanagawa | blue-moon | tokyonight
+    { import = "UI.Colors.HexColorHL" }, --
     --  ╭───────────────────────────────╮
     --  │ Statusline | Tabline | &Lines │
     --  ╰───────────────────────────────╯
-    -- { import = "UI.Lines.Lualine" }, -- normal lualine
-    { import = "UI.Lines.LualineEvil" },
+    { import = "UI.Lines.Lualine" }, -- normal lualine
+    -- { import = "UI.Lines.LualineEvil" }, -- Evil-Theme lualine
+    -- { import = "UI.Lines.sStatus" }, -- fast Statusline
     -- { import = "UI.Lines.InCline" },
+    { import = "UI.Lines.ColorsPick" }, -- pick colors
     --  ╭────────────────────────╮
     --  │  Navigation | Movement │
     --  ╰────────────────────────╯
+    { import = "UI.Nav.LastPlace" }, -- Get to the last position whereu were
+
+    -- { -- Winbar on Top
+    --     "Bekaboo/dropbar.nvim",
+    --     dependencies = { "nvim-tree/nvim-web-devicons" },
+    --     event = "BufReadPost",
+    --     config = function()
+    --         vim.opt.mousemoveevent = true
+    --     end,
+    -- },
     -- { import = "UI.Nav.BtrEsc" }, -- Better escape(jk)
     { import = "UI.Nav.Houdini" }, -- Houdini , Also Better escape(jk)
-    { import = "UI.Nav.MoveMini" }, --  "<A-k>", "<A-j>", "<A-l", "<A-h"
     { import = "UI.Nav.WildFire" }, -- Increment selection with <cr>
     { import = "UI.Nav.Spider" }, -- change movement w W e E ge
     -- { import = "UI.Nav.Nword" },   --  more versatile n(ext) key  not workign niga
     { import = "UI.Nav.Flash" }, -- Flash.floke to (s)earch in in normal mode
     -- { import = "UI.Nav.Ftline" }, -- (F,t,f,T) key better search
     { import = "UI.Nav.SymbolsOutlines" }, -- tree view with lsp symbols
+    { import = "UI.Nav.MoveMini" }, --  "<A-k>", "<A-j>", "<A-l", "<A-h"
+
+    { -- middle scroll end of line
+        "Aasim-A/scrollEOF.nvim",
+        event = "InsertEnter", -- i did that so i can see what happen without it
+        config = function()
+            require("scrollEOF").setup()
+        end,
+    },
+
     --         ╭──────────────────────────────────────────────────────────╮
     --         │               Split and Window Managemenet               │
     --         ╰──────────────────────────────────────────────────────────╯
@@ -93,8 +117,14 @@ require("lazy").setup({
     --  ╰─────────╯
     { import = "Tools.LSP.Lsp" }, -- lsp.zero
     { import = "Tools.LSP.LspTimeOut" }, -- save Ram from lsp
+    { import = "Tools.LSP.ILLUMINATI" }, -- highlight matches words of currect cursur
+    --  ╭────────────╮
+    --  │ Completion │
+    --  ╰────────────╯
     { import = "Tools.Cmp.Cmp_0" }, -- Completion
-    { import = "Tools.Cmp.Tabout" }, -- Completion
+    { import = "Tools.Cmp.Tabout" }, -- TAB-jump
+    -- { import = "Tools.Cmp.ePo" }, -- fast auto-Completion register_user_commandlly
+    -- { import = "Tools.Cmp.MiniCmp" }, -- din't work
     --  ╭─────────╮
     --  │ NULL.ls │
     --  ╰─────────╯
@@ -106,7 +136,7 @@ require("lazy").setup({
     { import = "Tools.Formater.conform" }, -- conform a buggy formater
     -- { import = "Tools.Formater.4mater" }, -- Fomatter.nvim
     -- { import = "Tools.Fundo" }, -- store undo changes for long
-    { import = "Tools.Formater.Align" }, -- Text alignments
+    { import = "Tools.Formater.Align" }, -- Mini Alighn
 
     --  ╭────────────────╮
     --  │  Commenting    │
@@ -132,7 +162,7 @@ require("lazy").setup({
     --  ╭───────────────╮
     --  │ SpecialSearch │
     --  ╰───────────────╯
-    { import = "Tools.SsrSearch" }, -- TS basesd search
+    { import = "Tools.SsrSearch" }, -- TS basesd search | Search and replace
     --  ╭───────────────────────────────╮
     --  │  Editing | Autopair | Tabout  │
     --  ╰───────────────────────────────╯
@@ -140,7 +170,8 @@ require("lazy").setup({
     --  ╭──────────╮
     --  │ Terminal │
     --  ╰──────────╯
-    -- { import = "Misc.Term", }, -- plugin for terminal but dint workk
+    -- { import = "Misc.Term.Fterm" }, -- numToStr
+    -- { import = "Misc.Term.tt" }, -- term with winbar WIP by you
     --  ╭──────╮
     --  │ Misc │
     --  ╰──────╯
@@ -153,8 +184,30 @@ require("lazy").setup({
     --  ╭──────────╮
     --  │ Markdown │
     --  ╰──────────╯
-    -- { import = "Utils.Markdown" },
-    { import = "Utils.Markdown.Previewr" },
+    { import = "Utils.Markdown.PreviewMD" }, -- Glow , Markdown-Preview
+    -- https://github.com/wallpants/github-preview.nvim
+    -- uses BUN .js and not work in window11:w
+    -- { import = "Utils.Markdown.TEST" }, --
+    -- -- 'frabjous/knap', -- use it one linux ^^ preview
+    -- { -- Clander View
+    --     "itchyny/calendar.vim", -- Calendar with the coolest CLOCK view
+    --     cmd = { "Calendar" },
+    -- },
+    -- { -- auto-bullets for markdown-like filetypes
+    --     "dkarter/bullets.vim",
+    --     ft = "markdown",
+    --     config = function()
+    --         vim.g.bullets_delete_last_bullet_if_empty = 1
+    --     end,
+    -- },
+    -- { -- Markdown Keys                     Only wors in Visual mode
+    --     "antonk52/markdowny.nvim", -- <c-e> = code block , <c-k> = link , <c-i> = italic , <c-b> = bold ,
+    --     ft = { "markdown", "txt", "md" },
+    --     config = function()
+    --         require("markdowny").setup()
+    --     end,
+    -- },
+
     --  ╭─────╮
     --  │ Git │
     --  ╰─────╯
@@ -193,15 +246,6 @@ require("lazy").setup({
         event = "BufReadPre",
         config = function()
             require("stay-in-place").setup({})
-        end,
-    },
-
-    { -- Winbar on Top
-        "Bekaboo/dropbar.nvim",
-        dependencies = { "nvim-tree/nvim-web-devicons" },
-        event = "BufReadPost",
-        config = function()
-            vim.opt.mousemoveevent = true
         end,
     },
 
@@ -253,50 +297,10 @@ require("lazy").setup({
         end,
     },
 
-    -- { -- Illuminate words
-    --   "RRethy/vim-illuminate",
-    --   event = "BufReadPost",
-    --   config = function()
-    --     require("illuminate").configure({
-    --       providers = { "regex" },
-    --       delay = 200,
-    --       large_file_cutoff = 2000,
-    --       large_file_overrides = { providers = { "lsp" } },
-    --     })
-    --     vim.api.nvim_set_hl(0, "IlluminatedWordRead", { link = "lualine_a_inactive" })
-    --     vim.api.nvim_set_hl(0, "IlluminatedWordText", { link = "lualine_a_inactive" })
-    --     vim.api.nvim_set_hl(0, "IlluminatedWordWrite", { link = "lualine_a_inactive" })
-    --     -- https://github.com/RRethy/vim-illuminate/issues/115#issuecomment-1221297926
-    --   end,
-    -- },
-
-    -- Utility 's
-    { -- Codebins 0x0
-        "rktjmp/paperplanes.nvim",
-        cmd = "PP",
-    },
-
-    { -- Last Location
-        "ethanholz/nvim-lastplace",
-        event = "BufReadPre",
-        config = function()
-            require("nvim-lastplace").setup({
-                lastplace_ignore_buftype = { "quickfix", "nofile", "help" },
-                lastplace_ignore_filetype = { "gitcommit", "gitrebase", "svn", "hgcommit" },
-                lastplace_open_folds = true,
-            })
-        end,
-    },
-
     -- Markdown
-    -- 'frabjous/knap', -- use it one linux
     -- { 'renerocksai/calendar-vim', -- some calender for wiki
     --   cmd = { "Calendar", "CalendarH", "CalendarT", "CalendarVR", "CalendarSearch", }, },
     --itchyny/calendar.vim
-    {
-        "itchyny/calendar.vim", -- Calendar with the coolest CLOCK view
-        cmd = { "Calendar" },
-    },
     -- Markdown Tool s'
     -- {
     -- 	"gaoDean/autolist.nvim", -- 🔥 powerfull autolist,checkbox toggle, full Markdown Weapon
@@ -305,9 +309,6 @@ require("lazy").setup({
     -- 		"tex",
     -- 		"plaintex",
     -- 	},
-    --
-    -- 	-- dependencies = "mzlogin/vim-markdown-toc", -- Markdown Toc
-    --
     -- 	config = function()
     -- 		local autolist = require("autolist")
     -- 		autolist.setup()
@@ -323,21 +324,6 @@ require("lazy").setup({
     -- 	end,
     -- },
 
-    { -- auto-bullets for markdown-like filetypes
-        "dkarter/bullets.vim",
-        ft = "markdown",
-        config = function()
-            vim.g.bullets_delete_last_bullet_if_empty = 1
-        end,
-    },
-    { -- Markdown Keys                     Only wors in Visual mode
-        "antonk52/markdowny.nvim", -- <c-e> = code block , <c-k> = link , <c-i> = italic , <c-b> = bold ,
-        ft = { "markdown", "txt", "md" },
-        config = function()
-            require("markdowny").setup()
-        end,
-    },
-
     --   { -- coool over 28 module for markdonw preview
     -- 'cnshsliu/smp.nvim',
     -- build ="cd lua/server && npm install",   -- yes, we should have node & npm installed.
@@ -346,10 +332,6 @@ require("lazy").setup({
     --   "MunifTanjim/nui.nvim",
     --     },
     --     },
-    { -- Bionic reader
-        "HampusHauffman/bionic.nvim",
-        cmd = "Bionic",
-    },
 
     -- Code manipulation
 
@@ -367,24 +349,6 @@ require("lazy").setup({
             require("nvim-surround").setup()
         end,
     },
-
-    -- {  -- indent
-    --    "lukas-reineke/indent-blankline.nvim",
-    --   config = function ()
-    --    vim.cmd [[highlight IndentBlanklineIndent1 guibg=#1f1f1f gui=nocombine]]
-    --    vim.cmd [[highlight IndentBlanklineIndent2 guibg=#1a1a1a gui=nocombine]]
-    --    require("indent_blankline").setup {
-    --     char = "│",
-    --     char_highlight_list = {
-    --       "IndentBlanklineIndent1",
-    --       "IndentBlanklineIndent2",
-    --      },
-    --      space_char_highlight_list = {
-    --       "IndentBlanklineIndent1",
-    --       "IndentBlanklineIndent2", },
-    --      show_trailing_blankline_indent = true, }
-    --   end
-    -- },
 
     { -- Highlight parethns
         "utilyre/sentiment.nvim",
@@ -420,25 +384,6 @@ require("lazy").setup({
         end,
     },
 
-    { -- UX
-        -- https://github.com/nvim-colortils/colortils.nvim
-        "NvChad/nvim-colorizer.lua",
-        cmd = "PickColorInsert",
-        ft = { "css", "scss", "markdown", "html", "config", "toml" },
-        config = function()
-            require("colorizer").setup({
-                filetypes = { "*" },
-                buftypes = {},
-            })
-        end,
-        dependencies = {
-            "ziontee113/color-picker.nvim",
-            config = function()
-                require("color-picker")
-            end,
-        },
-    },
-
     { -- Treesitter
         -- YOU ALMOST CERTAINLY WANT A MORE ROBUST nvim-treesitter SETUP
         -- see https://github.com/nvim-treesitter/nvim-treesitter
@@ -461,19 +406,6 @@ require("lazy").setup({
         end,
     },
 
-    -- True ZEN :)
-    {
-        "folke/zen-mode.nvim",
-        cmd = { "ZenMode" },
-        dependencies = {
-            "folke/twilight.nvim",
-            cmd = { "Twilight" },
-        },
-    },
-    -- {'Pocco81/true-zen.nvim', cmd = { 'TZAtaraxis', 'TZMinimalist', 'TZNarrow', 'TZFocus',}, },
-    -- {  'junegunn/goyo.vim',
-    --   cmd = "Goyo",},
-
     { -- Undotree
         "jiaoshijie/undotree",
         keys = "<leader>u",
@@ -495,21 +427,6 @@ require("lazy").setup({
     --       end
     --      },
     --
-    -- Game
-    {
-        "ThePrimeagen/vim-be-good", -- learn VimBeGood
-        cmd = "VimBeGood",
-    },
-
-    { -- middle scroll end of line
-        "Aasim-A/scrollEOF.nvim",
-        event = "CursorMoved",
-        config = function()
-            require("scrollEOF").setup()
-        end,
-    },
-
-    -- 'rcarriga/nvim-notify',
 
     -- { -- Diff of some files
     --     "jemag/telescope-diff.nvim",
@@ -580,6 +497,7 @@ require("lazy").setup({
 
     { -- Hex Editing
         "RaafatTurki/hex.nvim",
+        enabled = false,
         cmd = { "HexToggle", "HexDump" },
         opts = true,
     },
@@ -593,8 +511,30 @@ require("lazy").setup({
             vim.api.nvim_set_keymap("x", "ga/", "<cmd>TextCaseOpenTelescope<CR>", { desc = "Telescope" }) -- for Visual mode only
         end,
     },
-    { -- Buffer managemenet
-        "Pheon-Dev/buffalo-nvim",
+    {
+        "pablopunk/unclutter.nvim",
+        opts = {
+            hijack_jumplist = false,
+        },
+    },
+    { -- shade other windows
+        "miversen33/sunglasses.nvim",
+        event = "UIEnter",
         enabled = false,
+        opts = {},
+    },
+    {
+        "jakewvincent/mkdnflow.nvim",
+        ft = "markdown",
+        opts = true,
+        config = function()
+            --         require('mkdnflow').setup({
+            --                 -- Config goes here; leave blank for defaults
+            --         })
+            -- If you have an init.lua
+            vim.api.nvim_create_autocmd("FileType", { pattern = "markdown", command = "set awa" })
+            -- Use the following if your buffer is set to become hidden
+            --vim.api.nvim_create_autocmd("BufLeave", {pattern = "*.md", command = "silent! wall"})
+        end,
     },
 }, {})

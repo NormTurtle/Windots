@@ -90,6 +90,8 @@ end
 local key = vim.keymap -- for ease
 -- vim.api.nvim_set_keymap("n", "U", "<C-R>", { noremap = true })
 
+-- make good use of U (capital U) key
+key.set("n", "U", "mzlblgueh~`z") -- change case of word
 -- More text object
 key.set("o", "ar", "a]") -- [r]ectangular bracket
 key.set("o", "ac", "a}") -- [c]urly brace
@@ -109,29 +111,21 @@ key.set("n", "<C-ScrollWheelDown>", ":set guifont=-<CR>")
 -- Line movement Soft wrap movement fix
 key.set("n", "j", "gj") -- move vert by visual line
 key.set("n", "k", "gk") -- move vert by visual line
+-- HL as amplified versions of hjkl
+key.set({ "n", "v" }, "H", "0^") -- "beginning of line"
+key.set({ "n", "v" }, "L", "$") --"end of line" ,
+key.set({ "n", "v" }, "M", "gm") --"middle of line" ,
 
--- go to  beginning and end , now hadnel with readline
--- key.set("i", "<C-b>", "<HOME>") -- "beginning of line"
--- key.set("i", "<C-e>", "<End>")--"end of line" },
+-- vim.opt.scrolloff = 15 -- no more need for HML keys
 
-key.set({ "n", "v" }, "H", "<HOME>") -- "beginning of line"
-key.set({ "n", "v" }, "L", "<END>") --"end of line" ,
--- navigate within  insert and cmd-lin
-key.set("i", "<M-h>", "<Left>") --"move left"
-key.set("i", "<M-l>", "<Right>") -- "move right"
-key.set("i", "<M-j>", "<Down>") --  "move down"
-key.set("i", "<M-k>", "<Up>") --  "move up"
-
-key.set("c", "<M-h>", "<Left>") --"move left"
-key.set("c", "<M-l>", "<Right>") -- "move right"
-key.set("c", "<M-j>", "<Down>") --  "move down"
-key.set("c", "<M-k>", "<Up>") --  "move up"
-
-key.set("i", "<C-f>", "<Right>") -- forward-char
-key.set("i", "<C-b>", "<Left>") -- backward-char
-
-key.set("c", "<C-f>", "<Right>") -- forward-char
-key.set("c", "<C-b>", "<Left>") -- backward-char
+-- Ecams like Cmd & Inset Readline  { ! = insert,Cmdline }
+key.set("!", "<M-h>", "<Left>") --"move left"
+vim.keymap.set("n", "<leader>h", "K") -- mnemonic: [h]over
+key.set("!", "<M-l>", "<Right>") -- "move right"
+key.set("!", "<M-j>", "<Down>") --  "move down"
+key.set("!", "<M-k>", "<Up>") --  "move up"
+key.set("!", "<C-f>", "<Right>") -- forward-char
+key.set("!", "<C-b>", "<Left>") -- backward-char
 
 -- Manipulation in insert mode - cmd mode
 key.set("i", "<C-l>", "<Del>") -- delete like <delete> key to the right
@@ -187,15 +181,12 @@ key.set("n", "<M-q>", "<cmd>q<CR>")
 key.set({ "i", "c" }, "<C-v>", "<C-R>+", { desc = "Paste from clipboard" })
 key.set({ "n", "v" }, "<C-v>", '"+gP', { desc = "Paste from clipboard" })
 key.set({ "n", "v" }, "<C-c>", '"+y', { desc = "Copy to clipboard" })
--- key.set({ "v" }, "<C-x>", '"+x', { desc = "Cut to clipboard" })
-
--- -- tabs
--- key.set("n", "<leader><tab>l", ":tablast<cr>", { desc = "Last Tab" })
--- key.set("n", "<leader><tab>f", ":tabfirst<cr>", { desc = "First Tab" })
--- key.set("n", "<leader><tab><tab>", ":tabnew<cr>", { desc = "New Tab" })
--- key.set("n", "<leader><tab>]", ":tabnext<cr>", { desc = "Next Tab" })
--- key.set("n", "<leader><tab>d", ":tabclose<cr>", { desc = "Close Tab" })
--- key.set("n", "<leader><tab>[", ":tabprevious<cr>", { desc = "Previous Tab" })
+key.set({ "v" }, "<C-x>", '"+x', { desc = "Cut to clipboard" })
+-- paste text but DONT copy the overridden text
+key.set("x", "p", [["_dP]])
+-- key.set("x", "<leader>p", [["+dP]])
+-- delete text but DONT copy to clipboard
+key.set({ "n", "v" }, "<leader>d", [["_d]])
 
 -- Plugin Binding
 local opts = { noremap = true, silent = true } -- icon, color picker uses it as (opts,)
@@ -203,15 +194,9 @@ local opts = { noremap = true, silent = true } -- icon, color picker uses it as 
 -- Colors
 key.set("i", "<C-S>", "<CMD>PickColorInsert<CR>", opts)
 
--- paste text but DONT copy the overridden text
-key.set("x", "p", [["_dP]])
--- key.set("x", "<leader>p", [["+dP]])
--- delete text but DONT copy to clipboard
-key.set({ "n", "v" }, "<leader>d", [["_d]])
-
 -- move text in Visual mode
-vim.api.nvim_set_keymap("v", "J", ":m '>+1<CR>gv=gv", { noremap = true })
-vim.api.nvim_set_keymap("v", "K", ":m '<-2<CR>gv=gv", { noremap = true })
+-- vim.api.nvim_set_keymap("v", "J", ":m '>+1<CR>gv=gv", { noremap = true })
+-- vim.api.nvim_set_keymap("v", "K", ":m '<-2<CR>gv=gv", { noremap = true })
 
 -- toggling Wrap modes
 key.set("n", "yow", function()
@@ -224,4 +209,5 @@ key.set("n", "yow", function()
     end
   ]])
 end, { desc = "Toggle wrap mode", unique = true })
+
 -- -_______________________

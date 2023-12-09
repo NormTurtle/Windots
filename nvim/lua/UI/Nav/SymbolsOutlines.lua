@@ -3,8 +3,9 @@
 --         ╰──────────────────────────────────────────────────────────╯
 M = {
     {
-        "simrat39/symbols-outline.nvim",
+        "hedyhli/symbols-outline.nvim",
         cmd = { "SymbolsOutline", "SymbolsOutlineOpen" },
+        keys = { { "<leader>tt", "<cmd>SymbolsOutline<CR>", desc = "Toggle outline" } },
         opts = {
             highlight_hovered_item = true,
             show_guides = true,

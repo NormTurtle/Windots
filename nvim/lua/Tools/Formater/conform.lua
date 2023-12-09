@@ -11,7 +11,7 @@ M = {
                     html = { "prettier" },
                     javascript = { "prettier" },
                     css = { "prettier" },
-                    json = { "prettier" },
+                    -- json = { "prettier" },
                 },
 
                 format_after_save = {

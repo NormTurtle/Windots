@@ -11,6 +11,9 @@ local mp = require 'mp'
 local utils = require 'mp.utils'
 local script_name = mp.get_script_name()
 
+-- https://github.com/mpv-player/mpv/blob/a5c32ea52e6f943a4221f6f18239510502d9b3e4/sub/sd.h#L13
+local SUB_SEEK_OFFSET = 0.01
+
 -- split str into a table
 -- example: local t = split(s, "\n")
 -- plain: whether pat is a plain string (default false - pat is a pattern)
@@ -34,7 +37,8 @@ local function get_current_subtitle()
 end
 
 local function same_time(t1, t2)
-    return math.abs(t1 - t2) < 0.01
+    -- misses some merges if offset isn't doubled (0.012 already works in testing)
+    return math.abs(t1 - t2) < SUB_SEEK_OFFSET * 2
 end
 
 ---Merge lines with already collected subtitles
@@ -160,19 +164,33 @@ local function show_subtitle_list(subtitles)
         }
     }
 
-    local time = mp.get_property_number('time-pos')
-    for _, subtitle in ipairs(subtitles) do
-        menu.items[#menu.items + 1] = {
+    local last_started_index = 0
+    local last_active_index = nil
+    local time = mp.get_property_number('time-pos', 0) + SUB_SEEK_OFFSET
+    for i, subtitle in ipairs(subtitles) do
+        local has_started = subtitle.start <= time
+        local has_ended = subtitle.stop < time
+        local is_active = has_started and not has_ended
+        menu.items[i] = {
             title = subtitle.line,
             hint = mp.format_time(subtitle.start) .. '-' .. mp.format_time(subtitle.stop),
-            active = subtitle.start <= time and time <= subtitle.stop,
+            active = is_active,
             value = {
                 'seek',
                 subtitle.start,
                 'absolute+exact',
             }
         }
+        if has_started then
+            last_started_index = i
+        end
+        if is_active then
+            last_active_index = i
+        end
     end
+    menu.selected_index = last_active_index or
+        last_started_index and subtitles[last_started_index + 1] and last_started_index + 1 or
+        last_started_index
 
     local json = utils.format_json(menu)
     if menu_open then mp.commandv('script-message-to', 'uosc', 'update-menu', json)

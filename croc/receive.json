@@ -2,8 +2,8 @@
     "IsSender": false,
     "SharedSecret": "dawnFM",
     "Debug": false,
-    "RelayAddress": "5.161.69.143:9009",
-    "RelayAddress6": "[2a01:4ff:f0:23c2::14c:1]:9009",
+    "RelayAddress": "5.78.91.237:9009",
+    "RelayAddress6": "[2a01:4ff:1f0:c10b::1]:9009",
     "RelayPorts": null,
     "RelayPassword": "pass123",
     "Stdout": false,
@@ -21,5 +21,6 @@
     "HashAlgorithm": "",
     "ThrottleUpload": "",
     "ZipFolder": false,
-    "TestFlag": false
+    "TestFlag": false,
+    "GitIgnore": false
 }

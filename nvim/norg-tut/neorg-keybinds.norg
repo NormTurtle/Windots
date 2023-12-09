@@ -1,0 +1,42 @@
+@document.meta
+        title: Neorg default kemappings
+        de,cription: comments about neorg default keystrokes
+        author: muniter
+        categories: 
+        created: 2021-11-26
+        version: 0.0.8
+@end
+
+
+* Neorg
+ ** Default keymappings recommendation
+  *** "core.norg.qol.todo_items.todo.task_cycle"
+      Current: "<C-space>"
+      Recommended: `<C-n>` and `<C-p>`
+      Currently they are not mapped in normal mode, and they are widely recognized as used for
+      cycling completions. Another alternative is to override `<C-x>` and `<C-a>` only when on a
+      todo list item, which is the default in vim for incrementing and decrementing a number.
+  *** "core.norg.manoeuvre.item_{up,down}"
+      Current: n `<M-j>` and n `<M-k>`
+      Recommended: n `[e` and n `]e`
+      This come from the widely used vim-unimpaired keymappings, to move a line up and down.
+      Also `<M-j> and <M-k>` are actually mentioned/recommended for switching windows under
+      `:help terminal-input`
+  *** ""core.integrations.telescope.find_linkable""
+      Current: i `<C-l>`
+      Recommended: i `<C-x><C-c>`
+      `<C-l>` could be used by people to switch windows, but is also very comfy. I like `<C-x><C-c>`
+      the pattern it's known from `:h ins-completion` but free. It's not that hard to type in qwerty
+      since `xc` are neighbors.
+  *** "core.norg.qol.todo_items.todo.task_{done,undone,pending}"
+      Current: `gtd gtu gtp`
+      Recommended: `<leader>td` `<leader>tu` `<leader>tp`
+      It's easier to type, and although it has the same keystrokes leader is much more comfortable
+      than combining `g` with the other two letters.
+  *** "core.integrations.treesitter.{next,previous}.heading"
+      Current: sub-mode style mapping that remaps `j` and `k`
+      Recommended: `[[` and `]]`
+      This is built into vim, `:help [[` refered as sections forward and `:help ]]` as sections
+      backward. This can be seen in for example vim-fugitive, a nice addition could be `[]` and `][`
+      to move at the end of the sections/heading contesnts. Also I just entered this
+      *traverse-heading* submode and can't get out, send help :D

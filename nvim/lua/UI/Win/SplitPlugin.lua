@@ -2,7 +2,7 @@ M = {
 
     { -- Tmux 's panes
         "mrjones2014/smart-splits.nvim", -- super powerful Re sizer,swaper, panes
-        keys = { "<C-w>", "<C-l>", "C-h", "<leader>z" },
+        keys = { "<C-w>", "<C-k>", "<C-j>", "<C-l>", "C-h", "<leader>z" },
         -- event = "WinNew",
         dependencies = {
             { "anuvyklack/hydra.nvim" },
