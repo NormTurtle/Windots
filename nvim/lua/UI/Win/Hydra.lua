@@ -1,7 +1,7 @@
 M = {
 
     { -- Hydra
-        "anuvyklack/hydra.nvim",
+        "nvimtools/hydra.nvim",
         keys = { "<C-w>", "<Leader>ve", "<Leader>va" },
         config = function()
             require("UI.Win.VennHydra")

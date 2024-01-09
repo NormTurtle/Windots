@@ -1,3 +1,4 @@
+-- Ease Lsp set up
 M = {
     -- this is pure magic, i love this guy
     -- lsp in floating winodow https://github.com/max397574/dyn_help.nvim
@@ -14,7 +15,6 @@ M = {
         },
         config = function()
             local lsp_zero = require("lsp-zero")
-
             lsp_zero.on_attach(function(client, bufnr)
                 -- see :help lsp-zero-keybindings
                 -- to learn the available actions
@@ -41,6 +41,12 @@ M = {
                     end,
                 },
             })
+            -- Icons
+            local signs = { Error = "🤬", Warn = "🖐️", Hint = "☝️", Info = "🤓" }
+            for type, icon in pairs(signs) do
+                local hl = "DiagnosticSign" .. type
+                vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+            end
         end,
     },
 
@@ -55,8 +61,7 @@ M = {
     -- some lsp ui
     {
         "j-hui/fidget.nvim",
-        tag = "legacy",
-        event = "LspAttach",
+        event = { "DiagnosticChanged", "LspAttach" },
         opts = {},
     },
 }

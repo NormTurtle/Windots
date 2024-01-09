@@ -188,15 +188,12 @@ key.set("x", "p", [["_dP]])
 -- delete text but DONT copy to clipboard
 key.set({ "n", "v" }, "<leader>d", [["_d]])
 
--- Plugin Binding
-local opts = { noremap = true, silent = true } -- icon, color picker uses it as (opts,)
-
--- Colors
-key.set("i", "<C-S>", "<CMD>PickColorInsert<CR>", opts)
-
 -- move text in Visual mode
 -- vim.api.nvim_set_keymap("v", "J", ":m '>+1<CR>gv=gv", { noremap = true })
 -- vim.api.nvim_set_keymap("v", "K", ":m '<-2<CR>gv=gv", { noremap = true })
+
+-- Spell toggle
+key.set("n", "<leader>ss", "<cmd>setlocal spell!<cr>", { desc = "Toggle spell checking", silent = true })
 
 -- toggling Wrap modes
 key.set("n", "yow", function()
@@ -210,4 +207,10 @@ key.set("n", "yow", function()
   ]])
 end, { desc = "Toggle wrap mode", unique = true })
 
--- -_______________________
+-- Plugin Binding
+local opts = { noremap = true, silent = true } -- icon, color picker uses it as (opts,)
+
+-- Colors
+key.set("i", "<C-S>", "<CMD>PickColorInsert<CR>", opts)
+
+------------------------------

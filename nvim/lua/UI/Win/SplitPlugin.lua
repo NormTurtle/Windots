@@ -5,7 +5,7 @@ M = {
         keys = { "<C-w>", "<C-k>", "<C-j>", "<C-l>", "C-h", "<leader>z" },
         -- event = "WinNew",
         dependencies = {
-            { "anuvyklack/hydra.nvim" },
+            { "nvimtools/hydra.nvim" },
             { "sindrets/winshift.nvim" },
             -- { "romgrk/barbar.nvim" },
             { "jlanzarotta/bufexplorer" },

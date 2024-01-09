@@ -51,13 +51,6 @@ return {
         end,
     },
 
-    { --- Peek Num as u type in ':' | cmdline
-        "nacro90/numb.nvim",
-        keys = { ":" },
-        config = function()
-            require("numb").setup()
-        end,
-    },
     --
     -- { -- Floating messages
     -- 	"AckslD/messages.nvim",

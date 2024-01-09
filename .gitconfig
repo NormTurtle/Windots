@@ -1,0 +1,35 @@
+[user]
+	email = Omix1.ok@gmail.com
+	name = Omi
+	signingkey = A80BE1891C080901
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
+[alias]
+       	  s = status
+          a = add
+          c = commit
+          ca = commit -a
+          d = diff
+          f = fetch
+          pl = pull
+          pu = push
+          puf = push --force
+          ch = checkout
+          chb = checkout -b
+          b = branch
+          br = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+        amend = commit --amend
+          del = branch -D
+        undo = checkout --
+   ;        undo = reset HEAD~1 --mixed
+	  ; unadd = reset HEAD --
+	unstage = reset
+        # both are same thing
+          stashapply = stash pop
+          stashapply2 = stash apply
+	  graph = log --all --graph --decorate --oneline
+	  ref = reflog
+[core]
+	editor = nvim

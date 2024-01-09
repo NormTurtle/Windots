@@ -9,6 +9,7 @@ M = {
         "dinhhuy258/sfm.nvim",
         cmd = "SFMToggle",
         dependencies = {
+            { "nvim-tree/nvim-web-devicons" },
             { "dinhhuy258/sfm-bookmark.nvim" },
             { "dinhhuy258/sfm-filter.nvim" },
             { "dinhhuy258/sfm-git.nvim" },

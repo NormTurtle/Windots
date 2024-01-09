@@ -4,7 +4,7 @@ M = {
         "jbyuki/venn.nvim",
         keys = { "<Leader>ve", "<Leader>va" },
         cmd = "VBox",
-        dependencies = "anuvyklack/hydra.nvim",
+        dependencies = "nvimtools/hydra.nvim",
     },
 }
 return M

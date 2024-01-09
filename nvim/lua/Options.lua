@@ -1,30 +1,3 @@
---- File-WAtcher
-local watchedFile = "/tmp/nvim"
-local w = vim.loop.new_fs_event()
-local function on_change(err)
-    print("file has changed")
-end
-w:start(watchedFile, {}, on_change)
-
--- with error-handling
-local watchedFile = "/tmp/nvim"
-local w = vim.loop.new_fs_event()
-local function on_change(err)
-    if err then
-        print(err)
-        return
-    end
-    print("file has changed")
-    if w then
-        w:stop()
-        w:start()
-    end
-end
-
-if w then
-    w:start(watchedFile, {}, on_change)
-end
-
 -- Options
 local o = vim.opt
 -- disable netrw , For NerdTree but can't
@@ -32,14 +5,18 @@ local o = vim.opt
 -- vim.g.loaded_netrwPlugin = 1
 -- Troubleshoot
 o.keywordprg = ":help" -- Replace :man with :help, fix `K` freeze | :h keywordprg
-o.virtualedit = "onemore"
-
+o.virtualedit = "onemore" -- go to next line when at end with 'l'
+-- Use ripgrep for grepping.
+o.grepprg = "rg --vimgrep"
+o.grepformat = "%f:%l:%c:%m"
 o.swapfile = true -- disable|enable swap files
 -- File
 -- o.fileencoding           = "utf-8" -- the encoding written to a file
 o.backupcopy = "yes" -- fix weirdness for stuff that replaces the entire file when hot reloading
 -- Fancy
 o.conceallevel = 3 -- Hide conceal text {3}
+vim.g.virtcolumn_char = "▕"
+vim.g.virtcolumn_priority = 10
 
 -- -- Spell
 -- o.spell = true
@@ -48,7 +25,7 @@ o.conceallevel = 3 -- Hide conceal text {3}
 o.relativenumber = false -- make use relative num
 o.number = true -- get numbers on left side
 -- tabs & indent
-o.textwidth = 120 -- Only allowed chracter to typed in a sentence
+-- o.textwidth = 80 -- Only allowed chracter to typed in a sentence
 -- o.colorcolumn = "80" --  a Vertical line to indicate TEXTWIDTH
 o.whichwrap = "<,>,h,l" -- Allow h,l,left,right key to move to next life it reaches end of line
 -- o.tabstop                = 4 -- X mean how many SPACES instead of TAB,i used 4
@@ -87,7 +64,7 @@ o.incsearch = true
 o.termguicolors = true -- most of theme need it
 o.showmatch = true -- highlight matching [{()}]
 -- o.guifont = "Maple Mono SC NF,Delugia:h13" -- Font and size
-o.guifont = "Sarasa Term J Nerd Font,Delugia:h13" -- Font and size
+o.guifont = "Sarasa Term J Nerd Font,Delugia:h11" -- Font and size
 -- o.signcolumn = "yes"                              --- when i said do not use what u dont know
 --o.showcmd = true -- show commands in bottom bar
 

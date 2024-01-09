@@ -1,0 +1,64 @@
+set mainfont {{Delugia Mono} 10}
+set textfont {{Delugia Mono} 11}
+set uifont {{Delugia Mono} 12 bold}
+set tabstop 8
+set findmergefiles 0
+set maxgraphpct 50
+set maxwidth 16
+set cmitmode patch
+set wrapcomment none
+set autoselect 1
+set autosellen 40
+set showneartags 1
+set maxrefs 20
+set visiblerefs {"master"}
+set hideremotes 0
+set showlocalchanges 1
+set datetimeformat {%Y-%m-%d %H:%M:%S}
+set limitdiffs 1
+set uicolor #474747
+set want_ttk 1
+set bgcolor #212121
+set fgcolor #B0BEC5
+set uifgcolor #B0BEC5
+set uifgdisabledcolor #727272
+set colors {#C3E88D #FF5370 #82AAFF #C792EA #466D94 #AB7967 #F78C6C}
+set diffcolors {#FF5370 #C3E88D #89DDFF}
+set mergecolors {#FF5370 #C792EA #C3E88D #C792EA #F78C6C #89DDFF #F07178 #FFCB6B #89DDFF #F07178 #89DDFF #F78C6C #89DDFF #C3E88D #F78C6C #F07178}
+set markbgcolor #212121
+set diffcontext 5
+set selectbgcolor #606060
+set foundbgcolor #466D94
+set currentsearchhitbgcolor #FF9800
+set extdifftool opendiff
+set perfile_attrs 0
+set headbgcolor #C3E88D
+set headfgcolor #1A1A1A
+set headoutlinecolor #1A1A1A
+set remotebgcolor #F78C6C
+set tagbgcolor #FF9800
+set tagfgcolor #1A1A1A
+set tagoutlinecolor #1A1A1A
+set reflinecolor #EEFFFF
+set filesepbgcolor #545556
+set filesepfgcolor #A7A7A7
+set linehoverbgcolor #ffff80
+set linehoverfgcolor black
+set linehoveroutlinecolor black
+set mainheadcirclecolor #FFCB6B
+set workingfilescirclecolor #FF5370
+set indexcirclecolor #C3E88D
+set circlecolors {white #89DDFF #9AA7B0 #89DDFF #89DDFF}
+set linkfgcolor #FFCB6B
+set circleoutlinecolor #1A1A1A
+set diffbgcolors {"#fff3f3" "#f0fff0"}
+set web_browser open
+set geometry(main) 1920x992+0+19
+set geometry(state) zoomed
+set geometry(topwidth) 1920
+set geometry(topheight) 242
+set geometry(pwsash0) "1430 1"
+set geometry(pwsash1) "1654 1"
+set geometry(botwidth) 1276
+set geometry(botheight) 745
+set permviews {}
