@@ -381,5 +381,3 @@ local function cycle_put(amount)
 end
 vim.keymap.set("n", "<c-n>", cycle_put(1), { desc = "Swap put with next register" })
 vim.keymap.set("n", "<c-p>", cycle_put(-1), { desc = "Swap put with previous register" })
-
-

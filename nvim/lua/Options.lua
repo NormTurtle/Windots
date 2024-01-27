@@ -110,14 +110,17 @@ o.splitbelow = true
 -- end
 --
 --
--- -- Set shell to PowerShell 7 if on Win32 or Win64
--- -- but cmd is far better
--- if vim.fn.has("win32") == 1 or vim.fn.has("win64") == 1 then
--- 	o.shell = "pwsh -NoLogo"
--- 	o.shellcmdflag =
--- 		"-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;"
--- 	o.shellredir = "-RedirectStandardOutput %s -NoNewWindow -Wait"
--- 	o.shellpipe = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode"
--- 	o.shellquote = ""
--- 	o.shellxquote = ""
+-- Set shell to PowerShell 7 if on Win32 or Win64
+-- but cmd is far better
+-- local powershell_options = {
+--     shell = vim.fn.executable("pwsh") == 1 and "pwsh" or "powershell",
+--     shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;",
+--     shellredir = "-RedirectStandardOutput %s -NoNewWindow -Wait",
+--     shellpipe = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode",
+--     shellquote = "",
+--     shellxquote = "",
+-- }
+--
+-- for option, value in pairs(powershell_options) do
+--     vim.opt[option] = value
 -- end

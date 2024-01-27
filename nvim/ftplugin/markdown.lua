@@ -1,9 +1,7 @@
-
-vim.cmd([[
-
-echom " Markdown FtPlugin"
-setlocal textwidth=120
-setlocal autoindent
-
-
-]])
+-- vim.cmd([[
+--
+-- setlocal textwidth=120
+-- setlocal autoindent
+--
+--
+-- ]])

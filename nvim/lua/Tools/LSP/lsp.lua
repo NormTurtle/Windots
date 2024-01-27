@@ -28,10 +28,10 @@ M = {
             require("mason-lspconfig").setup({
                 ensure_installed = {
                     "lua_ls", -- lua lsp
-                    "jsonls", -- Json
+                    -- "jsonls", -- Json
                     -- "jq", -- Json Formate
                     "taplo", --  Toml
-                    "marksman", -- markdown
+                    -- "marksman", -- markdown
                 },
                 handlers = {
                     lsp_zero.default_setup,
@@ -61,7 +61,7 @@ M = {
     -- some lsp ui
     {
         "j-hui/fidget.nvim",
-        event = { "DiagnosticChanged", "LspAttach" },
+        event = { "LspAttach" },
         opts = {},
     },
 }

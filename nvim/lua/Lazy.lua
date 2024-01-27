@@ -66,10 +66,9 @@ require("lazy").setup({
     --  │  Navigation | Movement │
     --  ╰────────────────────────╯
     { import = "UI.Nav.LastPlace" }, -- Get to the last position whereu were
-
     -- { import = "UI.Nav.BtrEsc" }, -- Better escape(jk)
     { import = "UI.Nav.Houdini" }, -- Houdini , Also Better escape(jk)
-    { import = "UI.Nav.WildFire" }, -- Increment selection with <cr>
+    -- { import = "UI.Nav.WildFire" }, -- Increment selection with <cr>
     { import = "UI.Nav.Spider" }, -- change movement w W e E ge
     -- { import = "UI.Nav.Nword" },   --  more versatile n(ext) key  not workign niga
     -- { import = "UI.Nav.Flash" }, -- Flash.floke to (s)earch in in normal mode
@@ -98,7 +97,7 @@ require("lazy").setup({
     --  ╭────────────╮
     --  │ Fold | UFO │
     --  ╰────────────╯
-    { import = "UI.Fold.UF0" }, -- Ufo not in the sky
+    -- { import = "UI.Fold.UF0" }, -- Ufo not in the sky
     -- { import = "UI.Fold.PrettyFold" }, -- Ui modification | now vim buitin
     -- { import = "UI.Fold.TabFold" }, -- Ui modification
     --         ╭──────────────────────────────────────────────────────────╮
@@ -110,12 +109,14 @@ require("lazy").setup({
     --         ╭──────────────────────────────────────────────────────────╮
     --         │                          Tools                           │
     --         ╰──────────────────────────────────────────────────────────╯
+    -- { import = "Tools.Visualize.UndoTree" }, -- Visual-ize your undoing
     -- { import = "tmp.TEST.DupeKeys" }, -- check for Dupe keys
     --  ╭─────────╮
     --  │  LSP    │
     --  ╰─────────╯
     { import = "Tools.LSP.BiGfile" }, -- Remove all lsp for bigfiles
-    { import = "Tools.LSP.Lsp" }, -- lsp.zero , fidget
+    { import = "Tools.LSP.TreeShiter" }, -- Remove all lsp for bigfiles
+    { import = "Tools.LSP.Lsp" }, -- lsp.zero , fidget , mason
     { import = "Tools.LSP.LspTimeOut" }, -- save Ram from lsp
     { import = "Tools.LSP.ILLUMINATI" }, -- highlight matches words of currect cursur
     --  ╭────────────╮
@@ -130,7 +131,7 @@ require("lazy").setup({
     --  ╰─────────╯
     -- { import = "Tools.LSP.NullLs" }, -- set of language server
     -- i droped to configure it because im lazy
-    -- { import = "Tools.Fundo" }, -- store undo changes for long
+    -- { import = "Tools.Visualize.Fundo" }, -- store undo changes for long
     --  ╭───────────╮
     --  │ Formatter │
     --  ╰───────────╯
@@ -187,7 +188,7 @@ require("lazy").setup({
     --  │ Markdown │
     --  ╰──────────╯
     { import = "Utils.Markdown.PreviewMD" }, -- Glow , Markdown-Preview
-    { import = "Utils.Markdown.ImgPaste" }, -- Glow , Markdown-Preview
+    -- { import = "Utils.Markdown.ImgPaste" }, -- Pasting image
     -- https://github.com/wallpants/github-preview.nvim
     -- uses BUN .js and not work in window11:w
     -- { import = "Utils.Markdown.TEST" }, --
@@ -214,7 +215,7 @@ require("lazy").setup({
     --  ╭─────╮
     --  │ Git │
     --  ╰─────╯
-    { import = "Code.Git.Diffview" },
+    -- { import = "Code.Git.Diffview" },
     { import = "Code.Git.GitSigns" },
     { import = "Code.Git.Lazygit" },
     -- { import = "Code.Git.Magit" },
@@ -252,38 +253,6 @@ require("lazy").setup({
             require("stay-in-place").setup({})
         end,
     },
-
-    -- Ui
-    -- { -- Colored Sperator windows
-    --     "nvim-zh/colorful-winsep.nvim",
-    --     event = { "WinNew" },
-    --     config = function()
-    --         require("colorful-winsep").setup({
-    --             -- highlight for Window separator
-    --             -- highlight = {
-    --             --   bg = "#1f1d2e", -- rose pine theme
-    --             --   fg = "#eb6f92",
-    --             -- },
-    --             no_exec_files = {
-    --                 "packer",
-    --                 "SymbolsOutline",
-    --                 "TelescopePrompt",
-    --                 "mason",
-    --                 "CompetiTest",
-    --                 "NvimTree",
-    --                 "sfm",
-    --             },
-    --             -- Symbols for separator lines, the order: horizontal, vertical, top left, top right, bottom left, bottom right.
-    --             symbols = { "━", "┃", "┏", "┓", "┗", "┛" },
-    --             -- close_event = function()
-    --             --   -- Executed after closing the window separator
-    --             -- end,
-    --             -- create_event = function()
-    --             --   -- Executed after creating the window separator
-    --             -- end,
-    --         })
-    --     end,
-    -- },
 
     -- { -- Dynamic relative, Numbers
     --   "sitiom/nvim-numbertoggle",
@@ -349,9 +318,10 @@ require("lazy").setup({
             { "cs", desc = "󰅪 Change Surround Operator" },
             { "s", mode = "x", desc = "󰅪 Add Surround Operator" },
         },
-        config = function()
-            require("nvim-surround").setup()
-        end,
+        -- config = function()
+        --     require("nvim-surround").setup()
+        -- end,
+        opts = true,
     },
 
     { -- Highlight parethns
@@ -388,63 +358,6 @@ require("lazy").setup({
         end,
     },
 
-    { -- Treesitter
-        -- YOU ALMOST CERTAINLY WANT A MORE ROBUST nvim-treesitter SETUP
-        -- see https://github.com/nvim-treesitter/nvim-treesitter
-        "nvim-treesitter/nvim-treesitter",
-        event = { "BufReadPost", "InsertEnter" },
-        dependencies = {
-            -- "HiPhish/rainbow-delimiters.nvim",
-            -- "nvim-treesitter/nvim-treesitter-textobjects",
-            -- "JoosepAlviste/nvim-ts-context-commentstring",
-        },
-        opts = {
-            auto_install = true,
-            highlight = {
-                enable = true,
-                additional_vim_regex_highlighting = false,
-            },
-        },
-        config = function(_, opts)
-            require("nvim-treesitter.configs").setup(opts)
-        end,
-    },
-
-    { -- Undotree
-        "jiaoshijie/undotree",
-        keys = "<leader>u",
-        config = function()
-            vim.keymap.set("n", "<leader>u", require("undotree").toggle, { noremap = true, silent = true })
-            require("undotree").setup({
-                float_diff = true, -- using float window previews diff, set this `true` will disable layout option
-                layout = "left_bottom", -- "left_bottom", "left_left_bottom"
-                window = { winblend = 28, width = 25 },
-            })
-        end,
-        dependencies = { "nvim-lua/plenary.nvim" },
-    },
-
-    -- { -- some (G,g) Function
-    --   "echasnovski/mini.operators",
-    --   keys = 'g',
-    --   opts = true,
-    -- },
-    --
-
-    { -- Hex Editing
-        "RaafatTurki/hex.nvim",
-        enabled = false,
-        cmd = { "HexToggle", "HexDump" },
-        opts = true,
-    },
-    { -- Change Cases using 'ga~~~~~~'
-        "johmsalas/text-case.nvim",
-        keys = "ga",
-        config = function()
-            require("textcase").setup({})
-            require("telescope").load_extension("textcase")
-            vim.api.nvim_set_keymap("n", "ga/", "<cmd>TextCaseOpenTelescope<CR>", { desc = "Telescope" }) -- for normal mode only
-            vim.api.nvim_set_keymap("x", "ga/", "<cmd>TextCaseOpenTelescope<CR>", { desc = "Telescope" }) -- for Visual mode only
-        end,
-    },
+    -- { "milanglacier/yarepl.nvim", config = true },
+    { "HiPhish/repl.nvim" },
 }, {})

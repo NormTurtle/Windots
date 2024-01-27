@@ -18,6 +18,14 @@ require("Fm.NetRw")
 -- Vimscript for things i dont't know lua
 vim.cmd([[
 
+" Send the text of a motion to the REPL
+nmap <leader>rs  <Plug>(ReplSend)
+" Send the current line to the REPL
+nmap <leader>rss <Plug>(ReplSendLine)
+nmap <leader>rs_ <Plug>(ReplSendLine)
+" Send the selected text to the REPL
+vmap <leader>rs  <Plug>(ReplSend)
+
 " echom "<0_0>🗿"
 
  ]])
@@ -26,6 +34,8 @@ vim.cmd("cnoreabbrev Q  q")
 vim.cmd("cnoreabbrev q1  q!")
 vim.cmd("cnoreabbrev Q1  q!")
 vim.cmd("cnoreabbrev Qa1 qa!")
+vim.cmd("cnoreabbrev QA! qa!")
+vim.cmd("cnoreabbrev Qa! qa!")
 vim.cmd("cnoreabbrev Qa qa")
 vim.cmd("cnoreabbrev W  w")
 vim.cmd("cnoreabbrev Wq wq")
@@ -152,8 +162,8 @@ key.set("n", "<leader>LL", "<CMD>Lazy<CR>")
 --key.set("n", "<leader>P", ":e "$profile"<CR>")
 
 -- Splits  & windows
-key.set("n", "<leader>sh", "<C-w>v") -- split window vert
-key.set("n", "<leader>sv", "<C-w>s") -- split window horiz
+key.set("n", "<leader>sh", "<cmd> vnew <cr>") -- split window vert
+key.set("n", "<leader>sv", "<cmd> new <cr>") -- split window horiz
 key.set("n", "<leader>se", "<C-w>=") -- make window equal width
 key.set("n", "<leader>sx", ":close<CR>") -- close current split
 
@@ -199,7 +209,7 @@ key.set("n", "<leader>ss", "<cmd>setlocal spell!<cr>", { desc = "Toggle spell ch
 key.set("n", "yow", function()
     vim.cmd([[
     set wrap!
-    if &wrap == 1 
+    if &wrap == 1
       echom "Toggle to Wrap"
     else
       echom "Toggle to NoWrap"

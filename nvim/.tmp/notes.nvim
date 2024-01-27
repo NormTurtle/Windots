@@ -1,4 +1,0 @@
-:%s/\(.\)/\1\r/g      for replaceing 123123 without spaced chracter to each new line
-:%s/ /\r/g         space to new line
-
-

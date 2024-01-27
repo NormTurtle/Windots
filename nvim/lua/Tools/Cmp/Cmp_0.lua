@@ -77,7 +77,7 @@ M = {
                     fields = { "kind", "abbr", "menu" },
                     format = require("lspkind").cmp_format({
                         mode = "symbol", -- show only symbol annotations
-                        maxwidth = 40, -- prevent the popup from showing more than provided characters
+                        maxwidth = 50, -- prevent the popup from showing more than provided characters
                         ellipsis_char = "...", -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead
                         symbol_map = { Codeium = "" },
                         --             menu = {
@@ -98,7 +98,7 @@ M = {
                     }),
                 },
                 experimental = {
-                    ghost_text = false,
+                    ghost_text = true,
                 },
 
                 -- view = {
@@ -119,11 +119,11 @@ M = {
                     { name = "emoji" },
                     { name = "rg" },
                     -- { name = "fuzzy_buffer" },
-                    -- { name = 'async_path' },
-                    -- {  name = "path", },
+                    { name = "async_path" },
+                    { name = "path" },
 
                     -- { name = 'digraphs' }, --
-                    { name = "neorg" },
+                    -- { name = "neorg" },
                     { name = "calc" },
                     { name = "codeium" },
                 }),
