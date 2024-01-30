@@ -18,14 +18,6 @@ require("Fm.NetRw")
 -- Vimscript for things i dont't know lua
 vim.cmd([[
 
-" Send the text of a motion to the REPL
-nmap <leader>rs  <Plug>(ReplSend)
-" Send the current line to the REPL
-nmap <leader>rss <Plug>(ReplSendLine)
-nmap <leader>rs_ <Plug>(ReplSendLine)
-" Send the selected text to the REPL
-vmap <leader>rs  <Plug>(ReplSend)
-
 " echom "<0_0>🗿"
 
  ]])
@@ -51,11 +43,11 @@ vim.cmd("cnoreabbrev SET set")
 -- local colorscheme = "oh-lucy-evening"
 -- local colorscheme = "aura-dark-soft-text"
 -- aura-dark, aura-dark-soft-text,aura-soft-dark,aura-soft-dark-soft-text
-local colorscheme = "rose-pine"
+-- local colorscheme = "rose-pine"
 -- local colorscheme = "tokyonight"
 -- require("UI.Colors.rosepine")
 -- local colorscheme = "blue-moon"
--- local colorscheme = "kanagawa-dragon"   -- kanagawa
+local colorscheme = "kanagawa" -- kanagawa
 -- local colorscheme = "kanagawa-wave"   -- kanagawa
 -- local colorscheme = "catppuccin-frappe"
 -- local colorscheme = "catppuccin-macchiato"

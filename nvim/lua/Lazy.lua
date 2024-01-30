@@ -109,7 +109,7 @@ require("lazy").setup({
     --         ╭──────────────────────────────────────────────────────────╮
     --         │                          Tools                           │
     --         ╰──────────────────────────────────────────────────────────╯
-    -- { import = "Tools.Visualize.UndoTree" }, -- Visual-ize your undoing
+    { import = "Tools.Visualize.UndoTree" }, -- Visual-ize your undoing
     -- { import = "tmp.TEST.DupeKeys" }, -- check for Dupe keys
     --  ╭─────────╮
     --  │  LSP    │
@@ -259,16 +259,16 @@ require("lazy").setup({
     --   event = "VeryLazy",
     -- },
 
-    { -- Cursor line
-        "yamatsum/nvim-cursorline",
-        event = "BufReadPost",
-        config = function()
-            require("nvim-cursorline").setup({
-                cursorline = { enable = true, timeout = 300, number = true },
-                cursorword = { enable = false, min_length = 3, hl = { underline = false } },
-            })
-        end,
-    },
+    -- { -- Cursor line
+    --     "yamatsum/nvim-cursorline",
+    --     event = "BufReadPost",
+    --     config = function()
+    --         require("nvim-cursorline").setup({
+    --             cursorline = { enable = true, timeout = 300, number = true },
+    --             cursorword = { enable = false, min_length = 3, hl = { underline = false } },
+    --         })
+    --     end,
+    -- },
 
     -- Markdown
     -- { 'renerocksai/calendar-vim', -- some calender for wiki
@@ -358,6 +358,5 @@ require("lazy").setup({
         end,
     },
 
-    -- { "milanglacier/yarepl.nvim", config = true },
-    { "HiPhish/repl.nvim" },
+    { "milanglacier/yarepl.nvim", config = true },
 }, {})

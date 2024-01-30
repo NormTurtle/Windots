@@ -6,10 +6,10 @@ return {
     -- },
 
     --Theme
-    -- { -- inspired of gruv+dracula
-    --   "rebelot/kanagawa.nvim",
-    --   event = "ColorScheme",
-    -- },
+    { -- inspired of gruv+dracula
+        "rebelot/kanagawa.nvim",
+        event = "ColorScheme",
+    },
     {
         "projekt0n/caret.nvim",
         enabled = false,
@@ -33,7 +33,7 @@ return {
     {
         "rose-pine/neovim",
         name = "rose-pine",
-
+        enabled = false,
         event = "ColorScheme",
     },
     -- { "kyazdani42/blue-moon" }, -- hurt blule eye

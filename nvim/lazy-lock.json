@@ -20,7 +20,7 @@
   "highlight-undo.nvim": { "branch": "main", "commit": "50a6884a8476be04ecce8f1c4ed692c5000ef0a1" },
   "houdini.nvim": { "branch": "main", "commit": "39f2958b51938a37604bd266bbefde4867282ab8" },
   "hydra.nvim": { "branch": "main", "commit": "93e121b4098e2cc59975b4fa0951ebab34e82e9f" },
-  "img-clip.nvim": { "branch": "main", "commit": "3682b34906070ff4e6956e8e77e8f5ad08807d26" },
+  "kanagawa.nvim": { "branch": "master", "commit": "c19b9023842697ec92caf72cd3599f7dd7be4456" },
   "lazy.nvim": { "branch": "main", "commit": "96584866b9c5e998cbae300594d0ccfd0c464627" },
   "lazygit.nvim": { "branch": "main", "commit": "1e08e3f5ac1152339690140e61a4a32b3bdc7de5" },
   "lsp-timeout.nvim": { "branch": "main", "commit": "6325906730330105a9adc41d0ceb8499b3072e2b" },
@@ -49,7 +49,6 @@
   "oil.nvim": { "branch": "master", "commit": "dd432e76d01eda08b8658415588d011009478469" },
   "plenary.nvim": { "branch": "master", "commit": "55d9fe89e33efd26f532ef20223e5f9430c8b0c0" },
   "registers": { "branch": "main", "commit": "22bb98f93a423252fffeb3531f7bc12a3e07b63f" },
-  "repl.nvim": { "branch": "master", "commit": "d99ea4260f84b7acf8d8985421af929ff2bff680" },
   "rose-pine": { "branch": "main", "commit": "2a4aad89a803c84d7d1555d136639cd48ade1d64" },
   "scrollEOF.nvim": { "branch": "master", "commit": "75a471d8dab322947a28a7a810ab6ffc0dd051cf" },
   "sentiment.nvim": { "branch": "main", "commit": "ecde8d877881bb78fdb90060c0991e76770dbdbc" },
@@ -75,5 +74,6 @@
   "wilder.nvim": { "branch": "master", "commit": "679f348dc90d80ff9ba0e7c470c40a4d038dcecf" },
   "windows.nvim": { "branch": "main", "commit": "c7492552b23d0ab30325e90b56066ec51242adc8" },
   "winshift.nvim": { "branch": "main", "commit": "37468ed6f385dfb50402368669766504c0e15583" },
-  "yanky.nvim": { "branch": "main", "commit": "6bb9ffd3cad4c9876bda54e19d0659de28a4f84f" }
+  "yanky.nvim": { "branch": "main", "commit": "6bb9ffd3cad4c9876bda54e19d0659de28a4f84f" },
+  "yarepl.nvim": { "branch": "main", "commit": "c0ec78ef10ba01ab841b3e870421c33b1bbd6292" }
 }

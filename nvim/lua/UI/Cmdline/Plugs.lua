@@ -44,6 +44,7 @@ return {
     { -- Wild menu at cmd
         "gelguy/wilder.nvim",
         keys = { "/", ":", "?" },
+        -- build = "<CMD> UpdateRemotePlugins",
         -- event = "CmdlineEnter",
         config = function()
             -- require("Wilder")
