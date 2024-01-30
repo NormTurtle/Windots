@@ -155,17 +155,28 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 })
 
 -- Restore cursor position
-vim.api.nvim_create_augroup("general", {})
-vim.api.nvim_create_autocmd("BufReadPost", {
-    group = "general",
-    desc = "Restore last cursor position in file",
-    callback = function()
-        if vim.fn.line("'\"") > 0 and vim.fn.line("'\"") <= vim.fn.line("$") then
-            vim.fn.setpos(".", vim.fn.getpos("'\""))
-        end
-    end,
-})
----- Format Trailing on save
+--vim.api.nvim_create_augroup("general", {})
+--vim.api.nvim_create_autocmd("BufReadPost", {
+--    group = "general",
+--    desc = "Restore last cursor position in file",
+--    callback = function()
+--        if vim.fn.line("'\"") > 0 and vim.fn.line("'\"") <= vim.fn.line("$") then
+--            vim.fn.setpos(".", vim.fn.getpos("'\""))
+--        end
+--    end,
+--})
+vim.cmd[[
+augroup RestoreCursor
+  autocmd!
+  autocmd BufRead * autocmd FileType <buffer> ++once
+    \ let s:line = line("'\"")
+    \ | if s:line >= 1 && s:line <= line("$") && &filetype !~# 'commit'
+    \      && index(['xxd', 'gitrebase'], &filetype) == -1
+    \ |   execute "normal! g`\""
+    \ | endif
+augroup END
+
+]]
 --vim.api.nvim_create_autocmd("BufWrite",
 --	{
 --		pattern = "*",
@@ -381,3 +392,4 @@ local function cycle_put(amount)
 end
 vim.keymap.set("n", "<c-n>", cycle_put(1), { desc = "Swap put with next register" })
 vim.keymap.set("n", "<c-p>", cycle_put(-1), { desc = "Swap put with previous register" })
+
