@@ -1,4 +1,4 @@
--- subtitle-lines 1.0.0 - 2023-Oct-22
+-- subtitle-lines 1.1.0 - 2024-Feb-02
 -- https://github.com/christoph-heinrich/mpv-subtitle-lines
 --
 -- List and search subtitle lines of the selected subtitle track.
@@ -6,6 +6,7 @@
 -- Usage:
 -- add bindings to input.conf:
 -- Ctrl+f script-binding subtitle_lines/list_subtitles
+-- Ctrl+F script-binding subtitle_lines/list_secondary_subtitles
 
 local mp = require 'mp'
 local utils = require 'mp.utils'
@@ -28,10 +29,32 @@ local function split(str, pat, plain)
     return r
 end
 
+local sub_strings_available = {
+    primary = {
+        text = 'sub-text',
+        start = 'sub-start',
+        ['end'] = 'sub-end',
+        visibility = 'sub-visibility',
+        delay = 'sub-delay',
+        step = 'primary',
+        title = 'Subtitle lines',
+    },
+    secondary = {
+        text = 'secondary-sub-text',
+        start = 'secondary-sub-start',
+        ['end'] = 'secondary-sub-end',
+        visibility = 'secondary-sub-visibility',
+        delay = 'secondary-sub-delay',
+        step = 'secondary',
+        title = 'Secondary subtitle lines',
+    }
+}
+
+local sub_strings = sub_strings_available.primary
 local function get_current_subtitle()
-    local start = mp.get_property_number('sub-start')
-    local stop = mp.get_property_number('sub-end')
-    local text = mp.get_property('sub-text')
+    local start = mp.get_property_number(sub_strings.start)
+    local stop = mp.get_property_number(sub_strings['end'])
+    local text = mp.get_property(sub_strings.text)
     local lines = text and text:match('^[%s\n]*(.-)[%s\n]*$') or ''
     return start, stop, text, split(lines, '\n', true)
 end
@@ -40,7 +63,6 @@ local function same_time(t1, t2)
     -- misses some merges if offset isn't doubled (0.012 already works in testing)
     return math.abs(t1 - t2) < SUB_SEEK_OFFSET * 2
 end
-
 ---Merge lines with already collected subtitles
 ---returns lines that haven't been merged
 ---@param subtitles {start:number;stop:number;line:string}[]
@@ -49,20 +71,24 @@ end
 ---@param lines string[]
 ---@return string[]
 local function merge_subtitle_lines(subtitles, start, stop, lines)
+    -- remove duplicates in the current lines
+    for i = 1, #lines do
+        for j = #lines, i + 1, -1 do
+            if lines[i] == lines[j] then
+                table.remove(lines, j)
+            end
+        end
+    end
+
     -- merge identical lines that are right after each other
-    local merged_line_pos = {}
     for _, subtitle in ipairs(subtitles) do
         if same_time(subtitle.stop, start) then
-            for l, line in ipairs(lines) do
-                if line == subtitle.line then
-                    merged_line_pos[#merged_line_pos + 1] = l
+            for i = #lines, 1, -1 do
+                if lines[i] == subtitle.line then
+                    table.remove(lines, i)
                     if start < subtitle.start then subtitle.start = start end
                     if stop > subtitle.stop then subtitle.stop = stop end
                 end
-            end
-            for j = #merged_line_pos, 1, -1 do
-                table.remove(lines, merged_line_pos[j])
-                merged_line_pos[j] = nil
             end
         end
     end
@@ -72,27 +98,25 @@ end
 ---Get lines form current subtitle track
 ---@return {start:number;stop:number;line:string}[]
 local function acquire_subtitles()
-    local sub_delay = mp.get_property_number('sub-delay')
-    local sub_visibility = mp.get_property_bool('sub-visibility')
-    mp.set_property_bool('sub-visibility', false)
+    local sub_delay = mp.get_property_number(sub_strings.delay)
+    local sub_visibility = mp.get_property_bool(sub_strings.visibility)
+    mp.set_property_bool(sub_strings.visibility, false)
 
-    -- ensure we're at some subtitle
-    mp.commandv('sub-step', 1, 'primary')
-    mp.commandv('sub-step', -1, 'primary')
+    -- go to the first subtitle line
+    mp.commandv('set', sub_strings.delay, mp.get_property_number('duration', 0) + 365 * 24 * 60 * 60)
+    mp.commandv('sub-step', 1, sub_strings.step)
 
-    -- find first one
-    local start_time = mp.get_property_number('sub-start')
-    local old_start_time = start_time
-    local retry = 0
-    -- if we're not at the very beginning
-    -- this missies the first subtitle for some reason
-    repeat
-        mp.commandv('sub-step', -1, 'primary')
-        old_start_time = start_time
-        start_time = mp.get_property_number('sub-start')
-        if old_start_time == start_time then retry = retry + 1
-        else retry = 0 end
-    until retry > 10
+    -- this shouldn't be necessary, but it's kept just in case there actually
+    -- are subtitles further in the past then the huge delay used above
+    local retry_delay = sub_delay
+    while true do
+        mp.commandv('sub-step', -1, sub_strings.step)
+        local delay = mp.get_property_number(sub_strings.delay)
+        if retry_delay == delay then
+            break
+        end
+        retry_delay = delay
+    end
 
     ---@type {start:number;stop:number;line:string}[]
     local subtitles = {}
@@ -101,10 +125,10 @@ local function acquire_subtitles()
     local prev_stop = -1
     local prev_text = nil
 
-    retry = 0
-    repeat
+    retry_delay = nil
+    while true do
         local start, stop, text, lines = get_current_subtitle()
-        mp.commandv('sub-step', 1, 'primary')
+        mp.commandv('sub-step', 1, sub_strings.step)
         if start and (text ~= prev_text or not same_time(start, prev_start) or not same_time(stop, prev_stop)) then
             -- remove empty lines
             for j = #lines, 1, -1 do
@@ -122,20 +146,23 @@ local function acquire_subtitles()
             prev_start = start
             prev_stop = stop
             prev_text = text
-            retry = 0
         else
-            retry = retry + 1
+            local delay = mp.get_property_number(sub_strings.delay)
+            if retry_delay == delay then
+                break
+            end
+            retry_delay = delay
         end
-    until retry > 10
+    end
 
-    mp.set_property_number('sub-delay', sub_delay)
-    mp.set_property_bool('sub-visibility', sub_visibility)
+    mp.set_property_number(sub_strings.delay, sub_delay)
+    mp.set_property_bool(sub_strings.visibility, sub_visibility)
     return subtitles
 end
 
 local function show_loading_indicator()
     local menu = {
-        title = 'Subtitle lines',
+        title = sub_strings.title,
         items = { {
             title = 'Loading...',
             icon = 'spinner',
@@ -154,7 +181,7 @@ end
 local menu_open = false
 local function show_subtitle_list(subtitles)
     local menu = {
-        title = 'Subtitle lines',
+        title = sub_strings.title,
         items = {},
         type = 'subtitle-lines-list',
         on_close = {
@@ -211,14 +238,21 @@ mp.add_key_binding(nil, 'list_subtitles', function()
         mp.commandv('script-message-to', 'uosc', 'close-menu', 'subtitle-lines-list')
         return
     end
-
+    sub_strings = sub_strings_available.primary
     show_loading_indicator()
+    subtitles = acquire_subtitles()
+    mp.observe_property(sub_strings.text, 'string', sub_text_update)
+end)
 
-    if not subtitles or true then
-        subtitles = acquire_subtitles()
+mp.add_key_binding(nil, 'list_secondary_subtitles', function()
+    if menu_open then
+        mp.commandv('script-message-to', 'uosc', 'close-menu', 'subtitle-lines-list')
+        return
     end
-
-    mp.observe_property('sub-text', 'string', sub_text_update)
+    sub_strings = sub_strings_available.secondary
+    show_loading_indicator()
+    subtitles = acquire_subtitles()
+    mp.observe_property(sub_strings.text, 'string', sub_text_update)
 end)
 
 mp.register_script_message('uosc-menu-closed', function()
@@ -227,6 +261,10 @@ mp.register_script_message('uosc-menu-closed', function()
     mp.unobserve_property(sub_text_update)
 end)
 
+mp.register_event('start-file', function()
+    mp.commandv('script-message-to', 'uosc', 'close-menu', 'subtitle-lines-list')
+end)
+
 mp.register_event('end-file', function()
-    subtitles = nil
+    mp.commandv('script-message-to', 'uosc', 'close-menu', 'subtitle-lines-list')
 end)
