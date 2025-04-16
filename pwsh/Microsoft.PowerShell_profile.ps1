@@ -1,11 +1,12 @@
 # $stopwatch = [System.Diagnostics.Stopwatch]::StartNew()
 
 # CONFIG_BY_Normturtle :)
+#Set-Location "$($env:USERPROFILE)"
 # import Modules
-Invoke-Expression (&sfsu hook) # replace the scoop
+# Invoke-Expression (&sfsu hook) # replace the scoop
 Import-Module PSReadLine
-Import-Module gsudoModule
-# Import-Module Terminal-Icons
+#Import-Module gsudoModule
+# Invoke-Expression (&scoop-search --hook)
 Invoke-Expression (&starship init powershell)
 Import-Module scoop-completion
 
@@ -17,14 +18,14 @@ Import-Module scoop-completion
 # New-Item -ItemType SymbolicLink -Path  "C:\Users\path_new_dest"  -Target  "C:\Users\O_0\target_path"
 
 # # Enviroment variables
-# $env:XDG_CONFIG_HOME = "$Env:USERPROFILE\.config"
-$env:HELIX_RUNTIME = "$Env:USERPROFILE\.config"
-# $env:ERDTREE_CONFIG_PATH="$Env:USERPROFILE\.config\erdtree\.erdtreerc"
+$env:XDG_CONFIG_HOME = "$Env:USERPROFILE\.config"
+
 $env:XDG_STATE_HOME = "$Env:USERPROFILE\.cache"
 $env:XDG_STATE_DIR="$Env:USERPROFILE\.cache"
 $env:XDG_DATA_HOME = "$Env:USERPROFILE\.cache"
-$env:PAGER = 'bat'
+#$env:PAGER = 'bat'
 $EDITOR = 'nvim.exe'
+$VISUAL = 'nvim.exe'
 Set-Alias -Name vim -Value $EDITOR
 Set-Alias -Name ivm -Value $EDITOR
 Set-Alias -Name nvide -Value neovide
@@ -39,14 +40,14 @@ Set-Alias -Name tpgt -Value tgpt
 Set-Alias -Name cow  -Value cowsay
 Set-Alias -Name sudo -Value gsudo
 Set-Alias -Name py -Value python
+Set-Alias -Name ipy -Value ipython
 
 #                                  ╭──────────╮
 #                                  │ Function │
 #                                  ╰──────────╯
 # a Function is just a better alias
+function pgadmin { '& "C:\Program Files\PostgreSQL\17\pgAdmin 4\python\python.exe" "C:\Program Files\PostgreSQL\17\pgAdmin 4\web\pgAdmin4.py"','Start-Process "http://127.0.0.1:5050"' | ForEach-Object -Parallel { Invoke-Expression $_ } -ThrottleLimit 2 }
 Function vi { nvim.exe --clean -u ~\.config\vi\init.lua  $args } # PluginLess nvim more like vi
-Function vide {neovide -- --clean -u ~\.config\vi\.\init.lua $args } # PluginLess nvim more like vi
-Function mpd { mpd C:\Users\O_0\.config\mpd\mpd.conf & }
 Function eza { & eza.exe --oneline --long  --icons --all --group-directories-first --extended --git --no-permissions --no-time }
 Function la { eza }
 Function note { Start-Process notepads $args -NoNewWindow }
