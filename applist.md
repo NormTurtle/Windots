@@ -19,3 +19,10 @@
 [Vscodium](https://vscodium.com)  
 [mumuplayer](https://www.mumuplayer.com)
 [Unigram](https://apps.microsoft.com/detail/9n97zckpd60q?hl=en-US&gl=US)
+
+
+
+
+[Slyrics](https://github.com/mantou132/Spotify-Lyrics)
+
+[Online-python](https://onecompiler.com/)
