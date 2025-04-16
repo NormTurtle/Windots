@@ -1,7 +1,7 @@
 [user]
-	email = Omix1.ok@gmail.com
-	name = Omi
-	signingkey = A80BE1891C080901
+	email = Xxxxxxxxxxx.com
+	name = xxx
+	signingkey = xxxxxx
 [commit]
 	gpgsign = true
 [tag]
@@ -33,3 +33,7 @@
 	  ref = reflog
 [core]
 	editor = nvim
+[credential]
+	helper = manager
+[credential "helperselector"]
+	selected = manager
