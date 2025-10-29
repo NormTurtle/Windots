@@ -1,3 +1,4 @@
+
 # $stopwatch = [System.Diagnostics.Stopwatch]::StartNew()
 
 # CONFIG_BY_Normturtle :)
@@ -6,9 +7,11 @@
 # Invoke-Expression (&sfsu hook) # replace the scoop
 Import-Module PSReadLine
 #Import-Module gsudoModule
-# Invoke-Expression (&scoop-search --hook)
+Invoke-Expression (&scoop-search --hook)
 Invoke-Expression (&starship init powershell)
 Import-Module scoop-completion
+
+# Invoke-Expression (& { (zoxide init powershell | Out-String) })
 
 # Set Env:variables in shell
 #$ [Environment]::SetEnvironmentVariable("VARIABLE", "Value", "User")
@@ -50,7 +53,7 @@ function pgadmin { '& "C:\Program Files\PostgreSQL\17\pgAdmin 4\python\python.ex
 Function vi { nvim.exe --clean -u ~\.config\vi\init.lua  $args } # PluginLess nvim more like vi
 Function eza { & eza.exe --oneline --long  --icons --all --group-directories-first --extended --git --no-permissions --no-time }
 Function la { eza }
-Function note { Start-Process notepads $args -NoNewWindow }
+Function note { Start-Process notepad.exe $args -NoNewWindow }
 Function get { xh -d $args }
 Function ex { explorer.exe $args }
 function gdi { goodbyedpi & }
@@ -71,7 +74,7 @@ function pkill($name) { ps $name -ErrorAction SilentlyContinue | kill }  # kill 
 function df { get-volume } # get disk usage
 # Function ip { (Invoke-WebRequest http://ifconfig.me/ip ).Content} # get *ONLY* IP
 # Function ipinfo { (curl http://ipinfo.io)} # get full info of IP
-function unzip {Expand-Archive }   # unzip fliles from  without needing to install anythign
+# function unzip {Expand-Archive }   # unzip fliles from  without needing to install anythign
 function reload-profile { & $profile -Force }
 
 # # PsReadLine
@@ -100,6 +103,21 @@ function IconsDelayedLs {
     Get-ChildItem $args
 }
 Set-Alias -Name ls -Value IconsDelayedLs
+
+# load rclone
+. "$env:USERPROFILE\Documents\PowerShell\rclone-completion.ps1"
+
+
+function rclist {
+    param([string]$remotePath)
+    rclone lsjson $remotePath |
+    ConvertFrom-Json |
+    Sort-Object Size -Descending |
+    ForEach-Object {
+        $gb = [math]::Round($_.Size / 1GB, 2)
+        "$($_.Name) [$gb" + "GB]"
+    }
+}
 
 # to check what is taking to much time in loading
 # $stopwatch.Stop()
