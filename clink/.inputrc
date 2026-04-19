@@ -1,0 +1,24 @@
+# Clink Readline config (portable baseline).
+# Syntax:
+#   set VARIABLE value
+#   "KEYSEQ": "command"
+#
+# Keep this file self-contained for portability.
+# If you want machine-local overrides, add them directly below.
+
+# Completion behavior.
+set colored-stats on
+set completion-ignore-case on
+set show-all-if-ambiguous on
+set mark-symlinked-directories on
+
+# Keymap.
+set keymap emacs
+
+# History UX.
+set history-preserve-point on
+set show-mode-in-prompt off
+
+# Examples:
+# "\e[A": history-search-backward
+# "\e[B": history-search-forward

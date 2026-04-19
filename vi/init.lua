@@ -50,7 +50,7 @@ vim.opt.backup = false -- Don't create backup files
 vim.opt.writebackup = false -- Don't create backup before writing
 vim.opt.swapfile = false -- Don't create swap files
 vim.opt.undofile = true -- Persistent undo
-vim.opt.undodir = vim.fn.expand("~/.vim/undodir") -- Undo directory
+vim.opt.undodir = vim.fn.expand("~/.cache/.vim/undodir") -- Undo directory
 vim.opt.updatetime = 300 -- Faster completion
 vim.opt.timeoutlen = 500 -- Key timeout duration
 vim.opt.ttimeoutlen = 0 -- Key code timeout
@@ -185,7 +185,7 @@ map("n", "<leader>ff", ":find ", { desc = "Find file" })
 -- AutoCOMMANDS
 
 -- Mode based Cursorline
-vim.opt.cursorline = true -- current line Highlight
+vim.opt.cursorline = false -- current line Highlight
 vim.api.nvim_create_autocmd("InsertEnter", {
 	pattern = "*",
 	callback = function()
@@ -207,7 +207,7 @@ map("n", "<leader>pa", function()
 end)
 
 -- Create undo directory if it doesn't exist
-local undodir = vim.fn.expand("~/.vim/undodir")
+local undodir = vim.fn.expand("~/.cache/.vim/undodir")
 if vim.fn.isdirectory(undodir) == 0 then
 	vim.fn.mkdir(undodir, "p")
 end
@@ -432,3 +432,53 @@ vim.keymap.set("n", "<c-n>", cycle_put(1), { desc = "Swap put with next register
 vim.keymap.set("n", "<c-p>", cycle_put(-1), { desc = "Swap put with previous register" })
 
 -- Copy LSP Implentatation from https://github.com/radleylewis/nvim-lite/blob/34b789ad42212d30d0c071e3263c98e2afaf1e8d/init.lua#L467
+--
+--
+--
+
+-- JAVA & PYTHON SMART RUNNER
+
+local function code_run()
+	vim.cmd("write") -- Always save first
+	local ft = vim.bo.filetype
+
+	if ft == "java" then
+		-- Clear screen + Run Java Source File
+		-- (The 'cmd /c' wrapper helps handle terminal redraws in Windows)
+		vim.fn.system("cls")
+		vim.cmd("!java %")
+	elseif ft == "python" then
+		vim.fn.system("cls")
+		vim.cmd("!python %")
+	else
+		print("No runner configured for filetype: " .. ft)
+	end
+end
+
+-- Map Ctrl + Enter to Run
+-- Note: In Windows CMD, Ctrl+Enter can be tricky.
+-- If <C-CR> doesn't trigger, try <C-Enter> or check your terminal settings.
+--map("n", "<C-CR>", code_run, { desc = "Save & Run File" })
+map("n", "<c-s>", code_run)
+map("i", "<C-CR>", function()
+	vim.cmd("stopinsert")
+	code_run()
+end, { desc = "Save & Run File (Insert Mode)" })
+
+-- EXTERNAL FORMATTING (Google Java Format)
+
+local function format_code()
+	vim.cmd("write")
+	local ft = vim.bo.filetype
+	if ft == "java" then
+		-- Pipes current buffer content to google-java-format and replaces it
+		-- %! means "replace all lines with output of command"
+		vim.cmd("%!google-java-format -")
+		print("Java formatted.")
+	else
+		print("No formatter for " .. ft)
+	end
+end
+
+-- Press <Space> + f to auto-format your code
+map("n", "<leader>f", format_code, { desc = "Format Code" })

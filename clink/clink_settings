@@ -1,0 +1,37 @@
+# name: Enable automatic suggestions
+# type: boolean
+autosuggest.enable = True
+
+# name: Auto-update the Clink program files
+# type: enum
+# options: off,check,prompt,auto
+clink.autoupdate = off
+
+# name: Selects default key bindings
+# type: enum
+# options: bash,windows
+clink.default_bindings = windows
+
+# name: Controls what startup logo to show
+# type: enum
+# options: none,full,short
+clink.logo = none
+
+# name: Paths to load Lua scripts from
+# type: string
+clink.path = C:\Users\omi\.config\clink
+
+# name: Controls how duplicate entries are handled
+# type: enum
+# options: add,ignore,erase_prev
+history.dupe_mode = erase_prev
+
+# name: Share history between instances
+# type: boolean
+history.shared = True
+
+# name: Changes when directory scores are incremented
+# type: enum
+# options: pwd,prompt,none
+zoxide.hook = pwd
+

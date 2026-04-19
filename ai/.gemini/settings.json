@@ -1,0 +1,59 @@
+{
+  "general": {
+    "sessionRetention": {
+      "enabled": true,
+      "maxAge": "30d",
+      "warningAcknowledged": true,
+      "autoDeleteOldest": true
+    },
+    "telemetry": {
+      "enabled": false
+    },
+    "enableAutoUpdate": false,
+    "defaultApprovalMode": "auto_edit"
+  },
+  "context": {
+    "fileFiltering": {
+      "customIgnoreFilePaths": [
+        "C:/Users/omi/.gemini/.global_ignore"
+      ]
+    }
+  },
+  "advanced": {
+    "autoConfigureMemory": true
+  },
+  "security": {
+    "auth": {
+      "selectedType": "oauth-personal"
+    }
+  },
+  "ui": {
+    "showStatusInTitle": true,
+    "hideBanner": true,
+    "hideContextSummary": false,
+    "footer": {
+      "hideCWD": false,
+      "hideModelInfo": false,
+      "hideContextPercentage": false
+    },
+    "showMemoryUsage": true,
+    "showModelInfoInChat": true,
+    "showShortcutsHint": false,
+    "useAlternateBuffer": true,
+    "accessibility": {
+      "screenReader": false
+    }
+  },
+  "experimental": {
+    "useOSC52Paste": false,
+    "plan": true
+  },
+  "model": {
+    "name": "auto-gemini-3",
+    "compressionThreshold": 0.3,
+    "maxSessionTurns": 100
+  },
+  "tools": {
+    "truncateToolOutputThreshold": 20000
+  }
+}
